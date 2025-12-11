@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: tool-selector-backend
+    working_dir: /app
+    volumes:
+      - ./index:/app/index
+      - ./data:/app/data
+    command: >
+      bash -c "
+        cd /app &&
+        if [ ! -f index/faiss.index ]; then
+          cd src && poetry run python indexer.py && cd /app;
+        fi;
+        poetry run uvicorn backend.main:app --host 0.0.0.0 --port 8000
+      "
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: python:3.10-slim
+    container_name: tool-selector-frontend
+    working_dir: /app/frontend
+    volumes:
+      - ./frontend:/app/frontend
+    command: python -m http.server 3000
+    ports:
+      - "3000:3000"
