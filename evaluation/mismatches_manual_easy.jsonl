@@ -1,0 +1,2381 @@
+{
+    "query": "Task 8: I want to retrieve information about the user with id 456. Please accomplish this using the appropriate API tool.",
+    "expected": {
+        "name": "RapidAPI",
+        "api_name": "requests.get",
+        "description": "prueba democracia",
+        "parameters": [
+            {
+                "name": "idusers",
+                "description": "",
+                "type": "NUMBER"
+            }
+        ]
+    },
+    "topk": [
+        {
+            "score": 0.524381697177887,
+            "id": 446,
+            "tool_id": "554c40a07d466a85372c204d33105a977d33d6cb2a02ea8929491545bd4afa3a",
+            "text": "RapidAPI::requests.get\nTwitter public and private data API for search, Tweets, users, followers, images, media and more.\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"User ID\\n\\nUse the `User By Screen Name` endpoint to find the ID from a username.\", \"type\": \"STRING\"}, {\"name\": \"cursor\", \"description\": \"Cursor for other results\", \"type\": \"STRING\"}, {\"name\": \"count\", \"description\": \"Number of results\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "User ID\n\nUse the `User By Screen Name` endpoint to find the ID from a username.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "cursor",
+                        "description": "Cursor for other results",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "count",
+                        "description": "Number of results",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Twitter public and private data API for search, Tweets, users, followers, images, media and more."
+        },
+        {
+            "score": 0.4860018491744995,
+            "id": 1838,
+            "tool_id": "28b14fea202fee477467102d95f3091546b316597f324a9f5ebace12c26fd393",
+            "text": "RapidAPI::requests.get\nEasily get minecraft user info.\nparams: {\"required\": [{\"name\": \"name\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "name",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Easily get minecraft user info."
+        },
+        {
+            "score": 0.46629786491394043,
+            "id": 1039,
+            "tool_id": "a0db63a13f161c40199ca1cee8d5bfbb010719a1d9e6e4d0352108ea490ef44b",
+            "text": "RapidAPI::requests.get\nEasily lookup Discord users by ID, invite data & joins by invite code and hidden vanity data\nparams: {\"required\": [{\"name\": \"invite\", \"description\": \"\", \"type\": \"string\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "invite",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Easily lookup Discord users by ID, invite data & joins by invite code and hidden vanity data"
+        },
+        {
+            "score": 0.4476419687271118,
+            "id": 294,
+            "tool_id": "971375e8f5c43fd70e44c7f6c056a497381e605e1c36613e904a091072596243",
+            "text": "RapidAPI::requests.get\noDesk APIs allowed for authorized users to can access and build their own oDesk applications.\nparams: {\"required\": [{\"name\": \"code1_code2_coden_format\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"code1;code2;...;coden\", \"description\": \"The specific task codes, the list of codes should be separated with \\\";\\\"\", \"type\": \"STRING\"}, {\"name\": \"format\", \"description\": \"formation of response\", \"type\": \"STRING\"}, {\"name\": \"company\", \"description\": \"The company ID\", \"type\": \"NUMBER\"}, {\"name\": \"team\", \"description\": \"The team ID\", \"type\": \"NUMBER\"}, {\"name\": \"username\", \"description\": \"The username of the target user account\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "code1_code2_coden_format",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "code1;code2;...;coden",
+                        "description": "The specific task codes, the list of codes should be separated with \";\"",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "format",
+                        "description": "formation of response",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "company",
+                        "description": "The company ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "team",
+                        "description": "The team ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "username",
+                        "description": "The username of the target user account",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "oDesk APIs allowed for authorized users to can access and build their own oDesk applications."
+        },
+        {
+            "score": 0.44398197531700134,
+            "id": 1738,
+            "tool_id": "b9eac20ce390a53d97b027cb4d641eaac448498dc8a45f4a12e19ad21879cfa2",
+            "text": "RapidAPI::requests.get\nWHOIS API (v2) returns well-parsed WHOIS records with fields in XML and JSON formats for any IPv4, IPv6 address, domain name, or email.\nparams: {\"required\": [{\"name\": \"domainname\", \"description\": \"The name of the domain looked up.\", \"type\": \"STRING\"}, {\"name\": \"thinwhois\", \"description\": \"1 results in returning whois data from the registry only, without fetching data from the registrar. Returned registry data are to be found in the WhoisRecord \\u2192 registryData schema element. Accepted values are 0 and 1, the default is 0.\", \"type\": \"STRING\"}, {\"name\": \"callback\", \"description\": \"A JAVAscript function used when outputFormat is JSON; this is an implementation known as JSONP which invokes the callback on the returned response.\", \"type\": \"STRING\"}, {\"name\": \"preferfresh\", \"description\": \"Can be 0 or 1. 1 results in getting the latest Whois record even if it is incomplete. Defaults to 0.\", \"type\": \"STRING\"}, {\"name\": \"checkproxydata\", \"description\": \"1 results in fetching proxy/whois guard data, if found, they are returned in the WhoisRecord \\u2192 privateWhoisProxy schema element. Accepted values are 0 and 1, the default is 0.\", \"type\": \"STRING\"}, {\"name\": \"_parse\", \"description\": \"This parameter enables the use of the API for parsing WHOIS raw text provided in the query.1 provides parsing for input WHOIS raw texts described at the parameters registryRawText and registrarRawText. Accepted values are 0 and 1, the default is 0.\", \"type\": \"STRING\"}, {\"name\": \"registryrawtext\", \"description\": \"The string containing the registry WHOIS raw text to be parsed; works only when the _parse parameter is equal to 1.\", \"type\": \"STRING\"}, {\"name\": \"registrarrawtext\", \"description\": \"A string containing the registrar WHOIS raw text to be parsed; works only when the _parse parameter is equal to 1.\", \"type\": \"STRING\"}, {\"name\": \"ipwhois\", \"description\": \"1 results in returning the WHOIS record for the hosting IP if the WHOIS record for the domain is not supported. For unsupported TLDs, domain NameServers are returned if the ipWhois flag is activated, a WHOIS record for the hosting IP is added to the result.  Accepted values are 0 and 1, the default is 0.\", \"type\": \"STRING\"}, {\"name\": \"ip\", \"description\": \"Return IPs for the domain name. Accepted values are 0 and 1. Defaults to 0: no IPs are returned. 1 results in returning IPs.\", \"type\": \"STRING\"}, {\"name\": \"da\", \"description\": \"Perform domain availability check. Accepted values are 0, 1 and 2. Defaults to 0: no domain availability check is performed. When set to 1 the result contains a quick check on domain availability, 2 is slower but more accurate. Results are returned under WhoisRecord \\u2192 domainAvailability (AVAILABLE | UNAVAILABLE | UNDETERMINED).\", \"type\": \"STRING\"}, {\"name\": \"outputformat\", \"description\": \"Response output format.  Acceptable values: XML or JSON. Defaults to XML.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "domainname",
+                        "description": "The name of the domain looked up.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "thinwhois",
+                        "description": "1 results in returning whois data from the registry only, without fetching data from the registrar. Returned registry data are to be found in the WhoisRecord → registryData schema element. Accepted values are 0 and 1, the default is 0.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "callback",
+                        "description": "A JAVAscript function used when outputFormat is JSON; this is an implementation known as JSONP which invokes the callback on the returned response.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "preferfresh",
+                        "description": "Can be 0 or 1. 1 results in getting the latest Whois record even if it is incomplete. Defaults to 0.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "checkproxydata",
+                        "description": "1 results in fetching proxy/whois guard data, if found, they are returned in the WhoisRecord → privateWhoisProxy schema element. Accepted values are 0 and 1, the default is 0.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "_parse",
+                        "description": "This parameter enables the use of the API for parsing WHOIS raw text provided in the query.1 provides parsing for input WHOIS raw texts described at the parameters registryRawText and registrarRawText. Accepted values are 0 and 1, the default is 0.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "registryrawtext",
+                        "description": "The string containing the registry WHOIS raw text to be parsed; works only when the _parse parameter is equal to 1.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "registrarrawtext",
+                        "description": "A string containing the registrar WHOIS raw text to be parsed; works only when the _parse parameter is equal to 1.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "ipwhois",
+                        "description": "1 results in returning the WHOIS record for the hosting IP if the WHOIS record for the domain is not supported. For unsupported TLDs, domain NameServers are returned if the ipWhois flag is activated, a WHOIS record for the hosting IP is added to the result.  Accepted values are 0 and 1, the default is 0.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "ip",
+                        "description": "Return IPs for the domain name. Accepted values are 0 and 1. Defaults to 0: no IPs are returned. 1 results in returning IPs.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "da",
+                        "description": "Perform domain availability check. Accepted values are 0, 1 and 2. Defaults to 0: no domain availability check is performed. When set to 1 the result contains a quick check on domain availability, 2 is slower but more accurate. Results are returned under WhoisRecord → domainAvailability (AVAILABLE | UNAVAILABLE | UNDETERMINED).",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "outputformat",
+                        "description": "Response output format.  Acceptable values: XML or JSON. Defaults to XML.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "WHOIS API (v2) returns well-parsed WHOIS records with fields in XML and JSON formats for any IPv4, IPv6 address, domain name, or email."
+        },
+        {
+            "score": 0.442891389131546,
+            "id": 2141,
+            "tool_id": "0a879d9e1bf8cf89c5375434a9126d075ce125f71e2e7c08147d98af0e24889b",
+            "text": "RapidAPI::requests.get\nSocial Media Data API in Real-Time.   -Get very useful and unique information.  -I'm on Telegram https://t.me/logicBuilder News and announcements Telegram Channel https://t.me/logicApi\nparams: {\"required\": [{\"name\": \"video_id\", \"description\": \"Where to get vide id value?\\n\\nFor example in this video /@INFLUENCER/video/6818009093052189958 the id will be **6818009093052189958**\", \"type\": \"STRING\"}, {\"name\": \"fresh\", \"description\": \"By setting this query value to **1** you can force the API to return fresh data(not cached)\", \"type\": \"NUMBER\"}, {\"name\": \"limit\", \"description\": \"Number of records to return:\\n\\n- Default is 50\\n- Maximum is 150\", \"type\": \"NUMBER\"}, {\"name\": \"max_cursor\", \"description\": \"Pagination cursor\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "video_id",
+                        "description": "Where to get vide id value?\n\nFor example in this video /@INFLUENCER/video/6818009093052189958 the id will be **6818009093052189958**",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "fresh",
+                        "description": "By setting this query value to **1** you can force the API to return fresh data(not cached)",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "limit",
+                        "description": "Number of records to return:\n\n- Default is 50\n- Maximum is 150",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_cursor",
+                        "description": "Pagination cursor",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Social Media Data API in Real-Time.   -Get very useful and unique information.  -I'm on Telegram https://t.me/logicBuilder News and announcements Telegram Channel https://t.me/logicApi"
+        },
+        {
+            "score": 0.44192495942115784,
+            "id": 2541,
+            "tool_id": "eabe921acb225cb88b8fbd94f38429ad30c60e175269a20e2d6d9f2629971b24",
+            "text": "RapidAPI::requests.get\nuser url endpoint\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "user url endpoint"
+        },
+        {
+            "score": 0.4379444122314453,
+            "id": 550,
+            "tool_id": "243343cc752671d3e7353b33fdd869061a1f52d0393d79e437af16eaf0336889",
+            "text": "RapidAPI::requests.get\nGet web technology current and usage history for a domain going back to 2000.\nparams: {\"required\": [{\"name\": \"lookup\", \"description\": \"The domain you want to lookup.\\n\\n**Multi-Lookup Option**\\nWhen doing RAW domain lookups, you can parse up to 16 domains at once as a CSV. For example cnn.com,about.com,builtwith.com - this dramatically improves throughput.\", \"type\": \"STRING\"}, {\"name\": \"key\", \"description\": \"This is your key, use this for lookups. Get this key from https://api.builtwith.com\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "lookup",
+                        "description": "The domain you want to lookup.\n\n**Multi-Lookup Option**\nWhen doing RAW domain lookups, you can parse up to 16 domains at once as a CSV. For example cnn.com,about.com,builtwith.com - this dramatically improves throughput.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "key",
+                        "description": "This is your key, use this for lookups. Get this key from https://api.builtwith.com",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Get web technology current and usage history for a domain going back to 2000."
+        },
+        {
+            "score": 0.43455779552459717,
+            "id": 2483,
+            "tool_id": "909a36b3a35360a51db656a3bea8746346294d43f02b5f3ce1afdd40639756ae",
+            "text": "RapidAPI::requests.get\nReturns a JSON Profile data from a Linkedin ID\nparams: {\"required\": [{\"name\": \"url\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "url",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Returns a JSON Profile data from a Linkedin ID"
+        },
+        {
+            "score": 0.433882474899292,
+            "id": 525,
+            "tool_id": "016c7cab621d9fa08878b6b175174676b6c8212432b537b5fb4b36589b83b71e",
+            "text": "RapidAPI::requests.get\nThis API returns filed evictions, suits, liens and judgments against an individual within the past 7 years.\nparams: {\"required\": [{\"name\": \"appid\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "appid",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "This API returns filed evictions, suits, liens and judgments against an individual within the past 7 years."
+        },
+        {
+            "score": 0.4305751621723175,
+            "id": 804,
+            "tool_id": "40bb3eaa47f2e327700fba9a0a1ae8c327167796f8e278d69986ded12cd103d4",
+            "text": "RapidAPI::requests.get\nFetch any Indian Vehicle's Information through it's Registration Number/License Plate.\nThis API can fetch:-\n[+] Owner Name\n[+] Owner's Father Name\n[+] Owner's Permanent & Current Address\n[+] Vehicle Details\n[+] Financer Details\n[+] Permit & Insurance Details\n[+] NOC Details\n.......And Much More\n\nTags: Parivahan mParivahan Vehicle Info RC Details India Car Info Car Info RC database\nparams: {\"required\": [{\"name\": \"vehiclenumber\", \"description\": \"\", \"type\": \"string\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "vehiclenumber",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Fetch any Indian Vehicle's Information through it's Registration Number/License Plate.\nThis API can fetch:-\n[+] Owner Name\n[+] Owner's Father Name\n[+] Owner's Permanent & Current Address\n[+] Vehicle Details\n[+] Financer Details\n[+] Permit & Insurance Details\n[+] NOC Details\n.......And Much More\n\nTags: Parivahan mParivahan Vehicle Info RC Details India Car Info Car Info RC database"
+        },
+        {
+            "score": 0.43007877469062805,
+            "id": 2447,
+            "tool_id": "3b3786b571ad160b9e7047b2124176993411a2a92ff579ef94c60391613a9eab",
+            "text": "RapidAPI::requests.get\nThis is the description\nparams: {\"required\": [{\"name\": \"secret\", \"description\": \"Your API Secret that you get from your account on our website\", \"type\": \"STRING\"}, {\"name\": \"match_id\", \"description\": \"Match ID\", \"type\": \"NUMBER\"}, {\"name\": \"key\", \"description\": \"Your API Key that you get from your account on our website API key\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "secret",
+                        "description": "Your API Secret that you get from your account on our website",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "match_id",
+                        "description": "Match ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "key",
+                        "description": "Your API Key that you get from your account on our website API key",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "This is the description"
+        }
+    ]
+}
+{
+    "query": "Task 19: I want to use the Code For You API to run a program with the following inputs: CodeIsFun = \"print('Hello, World!')\", CodeForYou = \"Python program\", CodeWithMe = \"{\\\"P1\\\": \\\"Python\\\", \\\"P2\\\": \\\"Computer\\\"}\" Please accomplish this using the appropriate API tool.",
+    "expected": {
+        "name": "RapidAPI",
+        "api_name": "requests.get",
+        "description": "CodeIsFun",
+        "parameters": [
+            {
+                "name": "codeisfun",
+                "description": "",
+                "type": "STRING"
+            },
+            {
+                "name": "codeforyou",
+                "description": "",
+                "type": "STRING"
+            },
+            {
+                "name": "codewithme",
+                "description": "",
+                "type": "OBJECT"
+            }
+        ]
+    },
+    "topk": [
+        {
+            "score": 0.4656318426132202,
+            "id": 428,
+            "tool_id": "7df966650e3ee8984978bf49abf15e6a60690e35f05c92840d112cbcc80ea2e7",
+            "text": "RapidAPI::requests.get\nShopee product search api & product details api\nparams: {\"required\": [{\"name\": \"region\", \"description\": \"The region must one of [\\\\\\\\\\\\\\\"en\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"sg\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"my\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"th\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"vn\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"ph\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"tw\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"br\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"cl\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"mx\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"co\\\\\\\\\\\\\\\"]\", \"type\": \"string\"}, {\"name\": \"q\", \"description\": \"A product search query\", \"type\": \"STRING\"}, {\"name\": \"p\", \"description\": \"Page number\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "region",
+                        "description": "The region must one of [\\\\\\\"en\\\\\\\", \\\\\\\"sg\\\\\\\", \\\\\\\"my\\\\\\\", \\\\\\\"id\\\\\\\", \\\\\\\"th\\\\\\\", \\\\\\\"vn\\\\\\\", \\\\\\\"ph\\\\\\\", \\\\\\\"tw\\\\\\\", \\\\\\\"br\\\\\\\", \\\\\\\"cl\\\\\\\", \\\\\\\"mx\\\\\\\", \\\\\\\"co\\\\\\\"]",
+                        "type": "string"
+                    },
+                    {
+                        "name": "q",
+                        "description": "A product search query",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "p",
+                        "description": "Page number",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Shopee product search api & product details api"
+        },
+        {
+            "score": 0.42132461071014404,
+            "id": 226,
+            "tool_id": "e087f8020055c17e0fa3449645880f8f6caab4e63f10e57956539768d99b4aaf",
+            "text": "RapidAPI::requests.get\nFind nutrition facts by food name or by UPC (barcode). API supports English, Russian, Polish, Spanish, Bulgarian, Ukrainian\nparams: {\"required\": [{\"name\": \"name\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"lang\", \"description\": \"Lang is necessary for search in the certain lang food base.  It will be detected automatically or you could set manually from this set of values (\\\\\\\\\\\\\\\"en\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"ru\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"pl\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"bg\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"de\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"es\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"ua\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"by\\\\\\\\\\\\\\\")\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "name",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "lang",
+                        "description": "Lang is necessary for search in the certain lang food base.  It will be detected automatically or you could set manually from this set of values (\\\\\\\"en\\\\\\\", \\\\\\\"ru\\\\\\\", \\\\\\\"pl\\\\\\\", \\\\\\\"bg\\\\\\\", \\\\\\\"de\\\\\\\", \\\\\\\"es\\\\\\\", \\\\\\\"ua\\\\\\\", \\\\\\\"by\\\\\\\")",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Find nutrition facts by food name or by UPC (barcode). API supports English, Russian, Polish, Spanish, Bulgarian, Ukrainian"
+        },
+        {
+            "score": 0.4059009552001953,
+            "id": 294,
+            "tool_id": "971375e8f5c43fd70e44c7f6c056a497381e605e1c36613e904a091072596243",
+            "text": "RapidAPI::requests.get\noDesk APIs allowed for authorized users to can access and build their own oDesk applications.\nparams: {\"required\": [{\"name\": \"code1_code2_coden_format\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"code1;code2;...;coden\", \"description\": \"The specific task codes, the list of codes should be separated with \\\";\\\"\", \"type\": \"STRING\"}, {\"name\": \"format\", \"description\": \"formation of response\", \"type\": \"STRING\"}, {\"name\": \"company\", \"description\": \"The company ID\", \"type\": \"NUMBER\"}, {\"name\": \"team\", \"description\": \"The team ID\", \"type\": \"NUMBER\"}, {\"name\": \"username\", \"description\": \"The username of the target user account\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "code1_code2_coden_format",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "code1;code2;...;coden",
+                        "description": "The specific task codes, the list of codes should be separated with \";\"",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "format",
+                        "description": "formation of response",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "company",
+                        "description": "The company ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "team",
+                        "description": "The team ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "username",
+                        "description": "The username of the target user account",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "oDesk APIs allowed for authorized users to can access and build their own oDesk applications."
+        },
+        {
+            "score": 0.40413451194763184,
+            "id": 154,
+            "tool_id": "5ea62dfc3ca268ec82865b9515120c9d0edd3833d4857f768ad4728ce35b9dc8",
+            "text": "RapidAPI::requests.get\nA RESTful Interface to Unicode Data, this API gives easy and standardized access to all information from Codepoints.net. The detailed documentation is [available on Github](https://github.com/Boldewyn/Codepoints.net/wiki/API).\nparams: {\"required\": [{\"name\": \"properties\", \"description\": \"one or several key/value pairs of Unicode properties or int for decimal codepoint values or q for free text search.\", \"type\": \"STRING\"}, {\"name\": \"page\", \"description\": \"Page number for paginated results\", \"type\": \"NUMBER\"}, {\"name\": \"per_page\", \"description\": \"results per page\", \"type\": \"STRING\"}, {\"name\": \"callback\", \"description\": \"JSON-P return function name\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "properties",
+                        "description": "one or several key/value pairs of Unicode properties or int for decimal codepoint values or q for free text search.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "page",
+                        "description": "Page number for paginated results",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "per_page",
+                        "description": "results per page",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "callback",
+                        "description": "JSON-P return function name",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "A RESTful Interface to Unicode Data, this API gives easy and standardized access to all information from Codepoints.net. The detailed documentation is [available on Github](https://github.com/Boldewyn/Codepoints.net/wiki/API)."
+        },
+        {
+            "score": 0.39915573596954346,
+            "id": 1561,
+            "tool_id": "d4b8fa7e6ce73bd04b7cc1d64ce642e8c9b297ed50491debe5883572fb344d81",
+            "text": "RapidAPI::requests.get\nAutomate Outreach on Linkedin with ease! Extract search results, Find LinkedIn profile URLs, Scrape LinkedIn profiles etc.\nparams: {\"required\": [{\"name\": \"urls\", \"description\": \"URLs of the people you wish to send requests, Please insert a insert a string of 10 URLs separated by comma. Example :    URL1, URL2, URL3, ....... , URL10\", \"type\": \"STRING\"}, {\"name\": \"message\", \"description\": \"The message you will leave while sending request.  You can customize the message by using variables. For example, \\\\\\\"Hello [target_name],  would love to connect with you.\\\\\\\" is the message you want to send, here target_name is a variable, written in squared brackets '[]'. Assuming the target's name is John Wick then the resulting string will be, \\\\\\\"Hello John Wick, would love to connect with you.\\\\\\\"\\nNote: Please take care of the spelling while adding the variable(s).\", \"type\": \"STRING\"}, {\"name\": \"cookie\", \"description\": \"The value of cookie named \\\\\\\"li_at\\\\\\\".\\nNote: The above value is just a sample. To get the value actual value of the cookie , please follow the document link given.\", \"type\": \"STRING\"}, {\"name\": \"email\", \"description\": \"The email where you will receive the results of connection requests' status.\", \"type\": \"STRING\"}, {\"name\": \"key\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "urls",
+                        "description": "URLs of the people you wish to send requests, Please insert a insert a string of 10 URLs separated by comma. Example :    URL1, URL2, URL3, ....... , URL10",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "message",
+                        "description": "The message you will leave while sending request.  You can customize the message by using variables. For example, \\\"Hello [target_name],  would love to connect with you.\\\" is the message you want to send, here target_name is a variable, written in squared brackets '[]'. Assuming the target's name is John Wick then the resulting string will be, \\\"Hello John Wick, would love to connect with you.\\\"\nNote: Please take care of the spelling while adding the variable(s).",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "cookie",
+                        "description": "The value of cookie named \\\"li_at\\\".\nNote: The above value is just a sample. To get the value actual value of the cookie , please follow the document link given.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "email",
+                        "description": "The email where you will receive the results of connection requests' status.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "key",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Automate Outreach on Linkedin with ease! Extract search results, Find LinkedIn profile URLs, Scrape LinkedIn profiles etc."
+        },
+        {
+            "score": 0.3932128846645355,
+            "id": 2006,
+            "tool_id": "fbbfb89fb849304602e28baa083d076793392f8cfe03a827e8c983a4b3b8f19e",
+            "text": "RapidAPI::requests.get\nA Quotes API is an application programming interface that allows developers to access and retrieve a collection of quotes. It provides a convenient way to access a wide range of quotes from various authors, categories, or topics.Using a Quotes API, developers can integrate inspiring, motivational, or thought-provoking quotes into their applications, websites, or projects. The API typically offers endpoints that allow developers to fetch random quotes, search for quotes based on keywords or ca...\nparams: {\"required\": [{\"name\": \"word\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "word",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "A Quotes API is an application programming interface that allows developers to access and retrieve a collection of quotes. It provides a convenient way to access a wide range of quotes from various authors, categories, or topics.Using a Quotes API, developers can integrate inspiring, motivational, or thought-provoking quotes into their applications, websites, or projects. The API typically offers endpoints that allow developers to fetch random quotes, search for quotes based on keywords or ca..."
+        },
+        {
+            "score": 0.3866967260837555,
+            "id": 2746,
+            "tool_id": "2f19b482b6590b75a8b55b854a6b07b58f19ada62ed69367aa513fc4db18b5bf",
+            "text": "RapidAPI::requests.get\nGenerate barcodes and QR codes.\nparams: {\"required\": [{\"name\": \"type\", \"description\": \"The type of barcode can be one of qr_code, code_128a, code_128b, code_128c, code_25, code_25_interleaved, code_25_iata, code_39, code_93, gs1_128, ean_13, bookland, ean_8, upc_supplemental, codabar\", \"type\": \"STRING\"}, {\"name\": \"data\", \"description\": \"The data to be encoded\", \"type\": \"STRING\"}, {\"name\": \"size\", \"description\": \"\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "type",
+                        "description": "The type of barcode can be one of qr_code, code_128a, code_128b, code_128c, code_25, code_25_interleaved, code_25_iata, code_39, code_93, gs1_128, ean_13, bookland, ean_8, upc_supplemental, codabar",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "data",
+                        "description": "The data to be encoded",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "size",
+                        "description": "",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Generate barcodes and QR codes."
+        },
+        {
+            "score": 0.38178712129592896,
+            "id": 2846,
+            "tool_id": "06692b421910c398c58daa4df341f8fd0b1679ad0700c22a375ffb50fa9135d8",
+            "text": "API::pyarrow.compute.left_align_strings\nCompact representation\nparams: {\"required\": [{\"name\": \"strings\", \"description\": \"Array-like or scalar-like argument to compute function.\"}, {\"name\": \"width\", \"description\": \"Desired string length.\"}, {\"name\": \"padding\", \"description\": \"What to pad the string with. Should be one byte or codepoint.\"}, {\"name\": \"options\", \"description\": \"Alternative way of passing options.\"}, {\"name\": \"memory_pool\", \"description\": \"If not passed, will allocate memory from the default memory pool.\"}], \"optional\": []}",
+            "name": "API",
+            "api_name": "pyarrow.compute.left_align_strings",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "strings",
+                        "description": "Array-like or scalar-like argument to compute function."
+                    },
+                    {
+                        "name": "width",
+                        "description": "Desired string length."
+                    },
+                    {
+                        "name": "padding",
+                        "description": "What to pad the string with. Should be one byte or codepoint."
+                    },
+                    {
+                        "name": "options",
+                        "description": "Alternative way of passing options."
+                    },
+                    {
+                        "name": "memory_pool",
+                        "description": "If not passed, will allocate memory from the default memory pool."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Compact representation"
+        },
+        {
+            "score": 0.37257248163223267,
+            "id": 102,
+            "tool_id": "e29a10521de1d3f3b1e7a745960d6ca694a95be48d6690316c19fd415c3802da",
+            "text": "RapidAPI::requests.get\nTikTok API third party service, Stable and 24/7 maintenance. for any Help or Suggestions Contact me on https://t.me/dhmye\nparams: {\"required\": [{\"name\": \"cursor\", \"description\": \"put the cursor ther returned from the server in your Url param to get the next posts/items\", \"type\": \"NUMBER\"}, {\"name\": \"challenge_id\", \"description\": \"if u have the challenge_id  already use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_id\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param insted,\\nit will return data faster then the \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_name\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param.\", \"type\": \"STRING\"}, {\"name\": \"challenge_name\", \"description\": \"if u have the challenge_id already use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_id\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param insted,\\nit will return data faster then the \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_name\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "cursor",
+                        "description": "put the cursor ther returned from the server in your Url param to get the next posts/items",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "challenge_id",
+                        "description": "if u have the challenge_id  already use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_id\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param insted,\nit will return data faster then the \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_name\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "challenge_name",
+                        "description": "if u have the challenge_id already use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_id\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param insted,\nit will return data faster then the \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"challenge_name\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" param.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "TikTok API third party service, Stable and 24/7 maintenance. for any Help or Suggestions Contact me on https://t.me/dhmye"
+        },
+        {
+            "score": 0.37105539441108704,
+            "id": 460,
+            "tool_id": "211a055d55cf5d28779d88abea89ea6cd8304b646e013fd240d276625db6f101",
+            "text": "pyarrow::pyarrow.types.StringType\nCreate UTF8 variable-length string type\nparams: {\"required\": [{\"name\": \"None\", \"description\": \"There are no required arguments for this API.\"}], \"optional\": [{\"name\": \"metadata\", \"description\": \"An optional dictionary to attach metadata to the string type.\"}]}",
+            "name": "pyarrow",
+            "api_name": "pyarrow.types.StringType",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "None",
+                        "description": "There are no required arguments for this API."
+                    }
+                ],
+                "optional": [
+                    {
+                        "name": "metadata",
+                        "description": "An optional dictionary to attach metadata to the string type."
+                    }
+                ]
+            },
+            "description": "Create UTF8 variable-length string type"
+        },
+        {
+            "score": 0.3700140118598938,
+            "id": 2355,
+            "tool_id": "41d9265d16922d466c7ed8e224fb31150334f02166f2d7d5889c3d4049f47b2d",
+            "text": "RapidAPI::requests.get\nFast and Simple API to search for products, offers and reviews on Amazon in real-time.\nparams: {\"required\": [{\"name\": \"asin\", \"description\": \"Product ASIN for which to get details. Supports batching of up to 10 ASINs in a single request, separated by comma (e.g. *B08PPDJWC8,B07ZPKBL9V, B08BHXG144*).\\n\\nNote that each ASIN in a batch request is counted as a single request against the plan quota.\", \"type\": \"STRING\"}, {\"name\": \"country\", \"description\": \"Sets the marketplace country, language and currency. \\n\\n**Default:** `US`\\n\\n**Allowed values:**  `US, AU, BR, CA, CN, FR, DE, IN, IT, MX, NL, SG, ES, TR, AE, GB, JP`\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "asin",
+                        "description": "Product ASIN for which to get details. Supports batching of up to 10 ASINs in a single request, separated by comma (e.g. *B08PPDJWC8,B07ZPKBL9V, B08BHXG144*).\n\nNote that each ASIN in a batch request is counted as a single request against the plan quota.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "country",
+                        "description": "Sets the marketplace country, language and currency. \n\n**Default:** `US`\n\n**Allowed values:**  `US, AU, BR, CA, CN, FR, DE, IN, IT, MX, NL, SG, ES, TR, AE, GB, JP`",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Fast and Simple API to search for products, offers and reviews on Amazon in real-time."
+        }
+    ]
+}
+{
+    "query": "Task 57: I want to check if \"example@example.com\" is a valid email address. Please accomplish this using the appropriate API tool.",
+    "expected": {
+        "name": "RapidAPI",
+        "api_name": "requests.get",
+        "description": "FREE 20,000 , Email Debounce , Our bounce email API is a powerful tool that helps you manage your email deliverability by detecting, monitoring, and handling bounced emails from a range of ISPs. With our API, you can ensure your messages are delivered effectively, and that your sender reputation stays in good standing. Whether you're a small business or a large enterprise, our API is designed to simplify your email management and help you achieve better email performance. Contact us today to ...",
+        "parameters": [
+            {
+                "name": "email_string",
+                "description": "",
+                "type": "string"
+            }
+        ]
+    },
+    "topk": [
+        {
+            "score": 0.7169643640518188,
+            "id": 1941,
+            "tool_id": "ac77c2d65ad049a411181e4358ead53d8493fdeca62f8ee1464e18a61aaa50c6",
+            "text": "RapidAPI::requests.get\nAnalyse the content of an Email Address and check if it is valid or not. Email API can recode the Email Address if any common error or misspelling is found. The API can also check for invalid or fake DNS. [This API is under maintenance and is not working properly] \nparams: {\"required\": [{\"name\": \"email\", \"description\": \"Email Address\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "Email Address",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Analyse the content of an Email Address and check if it is valid or not. Email API can recode the Email Address if any common error or misspelling is found. The API can also check for invalid or fake DNS. [This API is under maintenance and is not working properly] "
+        },
+        {
+            "score": 0.6984635591506958,
+            "id": 1535,
+            "tool_id": "0e95a5b06ce9738d46ad300f3a85e650b3a126b7964cd51db5760d07bf939bfa",
+            "text": "RapidAPI::requests.get\nEmail Validation Service. check if a specific e-mail address is valid. Is it a proper domain? Is the e-mail a temporary/disposable e-mail? Our API contains 180k disposable email domains and gives the most valid email\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"\", \"type\": \"string\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Email Validation Service. check if a specific e-mail address is valid. Is it a proper domain? Is the e-mail a temporary/disposable e-mail? Our API contains 180k disposable email domains and gives the most valid email"
+        },
+        {
+            "score": 0.6420908570289612,
+            "id": 2359,
+            "tool_id": "d5d26a8f4f3f59202ee7e4de30e60c718b28586149ee7cc41a0b1487ee811f1e",
+            "text": "RapidAPI::requests.get\n“Validate Email” before you send. Discover deliverability of email addresses by our most popular email verification API.\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "“Validate Email” before you send. Discover deliverability of email addresses by our most popular email verification API."
+        },
+        {
+            "score": 0.6250377893447876,
+            "id": 494,
+            "tool_id": "a09631684a8e65a4f435cd17887642d776152c9ae83cfd5548c798e15a38b502",
+            "text": "RapidAPI::requests.get\nEasily check if a certain e-mail address is valid. Is it a valid domain? Is the e-mail a temporary/disposable e-mail? That's a common indicator of spamming/trolling, so now there's an API for you so you can easily block it!\nparams: {\"required\": [{\"name\": \"domain\", \"description\": \"Full e-mail, or domain to check if valid or temporary/disposable. You can enter an e-mail address, and it will be converted to a domain, but entering just the domain is recommended for user privacy reasons.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "domain",
+                        "description": "Full e-mail, or domain to check if valid or temporary/disposable. You can enter an e-mail address, and it will be converted to a domain, but entering just the domain is recommended for user privacy reasons.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Easily check if a certain e-mail address is valid. Is it a valid domain? Is the e-mail a temporary/disposable e-mail? That's a common indicator of spamming/trolling, so now there's an API for you so you can easily block it!"
+        },
+        {
+            "score": 0.6218721270561218,
+            "id": 1772,
+            "tool_id": "5591d417901fd50cdf2956b684457f497a142beada1c72931b84a17c97d1a8e1",
+            "text": "RapidAPI::requests.get\nAPISOLUTION services provide a comprehensive API for fast email validation and verification for any developer to use on start-ups and staff projects.\nparams: {\"required\": [{\"name\": \"domain\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "domain",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "APISOLUTION services provide a comprehensive API for fast email validation and verification for any developer to use on start-ups and staff projects."
+        },
+        {
+            "score": 0.6191467642784119,
+            "id": 941,
+            "tool_id": "b0980da3767eec5a0c9de9886a07b922feca188e247c2073ae0685268588d712",
+            "text": "RapidAPI::requests.get\nThis Email API is helpful to validate email addresses(single or bulk, using txt and csv), detect temporary, get fake emails, check free emails, check MX records and identify free/paid email service providers.\nparams: {\"required\": [], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [],
+                "optional": []
+            },
+            "description": "This Email API is helpful to validate email addresses(single or bulk, using txt and csv), detect temporary, get fake emails, check free emails, check MX records and identify free/paid email service providers."
+        },
+        {
+            "score": 0.6103735566139221,
+            "id": 2111,
+            "tool_id": "97b969c8b8dd6c66c82abbdd71c32f2ac49d3a2e456578e5a34ff5ddbe909d30",
+            "text": "RapidAPI::requests.get\nA simple API to verify email addresses in making sure they are valid and real, for ensuring you are sending emails to actual people!\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "A simple API to verify email addresses in making sure they are valid and real, for ensuring you are sending emails to actual people!"
+        },
+        {
+            "score": 0.5993002653121948,
+            "id": 3050,
+            "tool_id": "4e2ef5c6ae1612f565ae385c98328fd4aaae2a4f2ac09d844612bddc17f5d738",
+            "text": "RapidAPI::requests.get\nEmail address validation API\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"Email address to validate\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "Email address to validate",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Email address validation API"
+        },
+        {
+            "score": 0.5947481393814087,
+            "id": 660,
+            "tool_id": "52733c31bbb7897ee9cc5268879bcab050e5e297547c1b96b6ce1cb00664a8b2",
+            "text": "RapidAPI::requests.get\nStop guessing if an email is valid or full. With this API, you can determine first hand if the email is deliverable and working. Not only can this API detect if an email is formatted correctly, it also uses various methods to verify if the email is actually valid\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Stop guessing if an email is valid or full. With this API, you can determine first hand if the email is deliverable and working. Not only can this API detect if an email is formatted correctly, it also uses various methods to verify if the email is actually valid"
+        },
+        {
+            "score": 0.5758273601531982,
+            "id": 743,
+            "tool_id": "03b69cfb7feca841d39d1adf57f45a0c23c48ccd291f6330a8f98b66d7f81319",
+            "text": "RapidAPI::requests.get\nThis is an easy way to check if a email address is disposable or valid so you can avoid fake users on your database.\nparams: {\"required\": [{\"name\": \"domain\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "domain",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "This is an easy way to check if a email address is disposable or valid so you can avoid fake users on your database."
+        },
+        {
+            "score": 0.5738717317581177,
+            "id": 1316,
+            "tool_id": "97d90c5688dface0d736082a04c6825bf07488c822c95e126686fdd425be0650",
+            "text": "RapidAPI::requests.get\nAPI which checks if email really exist on server or not.\nIt check for different parameters for giving end results .\nCheck for MX records, SMTP deliverability, Disposable check and many more.\nparams: {\"required\": [], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [],
+                "optional": []
+            },
+            "description": "API which checks if email really exist on server or not.\nIt check for different parameters for giving end results .\nCheck for MX records, SMTP deliverability, Disposable check and many more."
+        },
+        {
+            "score": 0.5657659769058228,
+            "id": 80,
+            "tool_id": "b42165763dd29de74767c451576f913fdc3e345cf394331a54b926f92a41b6b3",
+            "text": "RapidAPI::requests.get\nDeep email verify. Supports: Gmail, Mail.Ru, iCloud, Hotmail, Yahoo, Outlook, Rambler, Yandex and more.\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"Email for validation\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "Email for validation",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Deep email verify. Supports: Gmail, Mail.Ru, iCloud, Hotmail, Yahoo, Outlook, Rambler, Yandex and more."
+        },
+        {
+            "score": 0.5522454977035522,
+            "id": 989,
+            "tool_id": "52ed0ddff1103636d709a016effd8f568e0b4d4862cca85b5b824a40a91af1c1",
+            "text": "RapidAPI::requests.get\nSimple and powerful email verification JSON API using SMTP, typo checks, syntax validation, and free and disposable provider filtering.\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"the email address to be validated\", \"type\": \"STRING\"}, {\"name\": \"catch_all\", \"description\": \"Set to \\\"0\\\" (default) to turn off Catch-all detection, set to \\\"1\\\" to turn on Catch-all detection\", \"type\": \"NUMBER\"}, {\"name\": \"smtp\", \"description\": \"Set to \\\"0\\\" to turn off SMTP check, set to \\\"1\\\" (default) to turn on SMTP check\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "the email address to be validated",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "catch_all",
+                        "description": "Set to \"0\" (default) to turn off Catch-all detection, set to \"1\" to turn on Catch-all detection",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "smtp",
+                        "description": "Set to \"0\" to turn off SMTP check, set to \"1\" (default) to turn on SMTP check",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Simple and powerful email verification JSON API using SMTP, typo checks, syntax validation, and free and disposable provider filtering."
+        },
+        {
+            "score": 0.5461441278457642,
+            "id": 2135,
+            "tool_id": "46ad9ac6b921e39e4fc632a16d8d6083c8e593076c19a2afa85c254ea1524e85",
+            "text": "RapidAPI::requests.get\nAPI to validate email and normalize email\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"email id\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "email id",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "API to validate email and normalize email"
+        }
+    ]
+}
+{
+    "query": "Task 67: I want to get the exchange rate for JPY on a specific date, June 30, 2022, using the Words World API. Please accomplish this using the appropriate API tool.",
+    "expected": {
+        "name": "RapidAPI",
+        "api_name": "requests.get",
+        "description": "Quote from world people",
+        "parameters": [
+            {
+                "name": "date",
+                "description": "",
+                "type": "STRING"
+            },
+            {
+                "name": "valuta",
+                "description": "",
+                "type": "STRING"
+            }
+        ]
+    },
+    "topk": [
+        {
+            "score": 0.5300294160842896,
+            "id": 864,
+            "tool_id": "49582a0ae78c12868e4d55f3fd79b15ea798f2096fe1a788ed4edc5ef31377d8",
+            "text": "RapidAPI::requests.get\nIP2Currency Exchange Rate Web Service provides the user with an easy way to get a localized & latest Currency Exchange Rate based on the visitor's IP address.\r\n\r\nSign up for free license key at http://www.fraudlabs.com/freelicense.aspx?PackageID=10 which allows up to 90 queries a month.\nparams: {\"required\": [{\"name\": \"license\", \"description\": \"API license key.\", \"type\": \"STRING\"}, {\"name\": \"visitorip\", \"description\": \"IP address of visitor.\", \"type\": \"STRING\"}, {\"name\": \"fromcurrencycode\", \"description\": \"Base currency code.\", \"type\": \"STRING\"}, {\"name\": \"tocurrencycode\", \"description\": \"Target currency code.\", \"type\": \"STRING\"}, {\"name\": \"fromamount\", \"description\": \"Currency amount for conversion.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "license",
+                        "description": "API license key.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "visitorip",
+                        "description": "IP address of visitor.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "fromcurrencycode",
+                        "description": "Base currency code.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "tocurrencycode",
+                        "description": "Target currency code.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "fromamount",
+                        "description": "Currency amount for conversion.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "IP2Currency Exchange Rate Web Service provides the user with an easy way to get a localized & latest Currency Exchange Rate based on the visitor's IP address.\r\n\r\nSign up for free license key at http://www.fraudlabs.com/freelicense.aspx?PackageID=10 which allows up to 90 queries a month."
+        },
+        {
+            "score": 0.5232058763504028,
+            "id": 2498,
+            "tool_id": "88f53d8d6f9c6cdee8549275f6456c6ddd5071a0c5bbc50adc93aec1a7f28a1a",
+            "text": "RapidAPI::requests.get\nFree currency conversion API for all 160 world currencies. Tens of thousands of developers have picked ExchangeRate-API.com over the last 10 years for its reliable data & exceptional uptime - give it a try!\nparams: {\"required\": [{\"name\": \"base_code\", \"description\": \"\", \"type\": \"string\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "base_code",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Free currency conversion API for all 160 world currencies. Tens of thousands of developers have picked ExchangeRate-API.com over the last 10 years for its reliable data & exceptional uptime - give it a try!"
+        },
+        {
+            "score": 0.5108789205551147,
+            "id": 379,
+            "tool_id": "4b4007baed7c99507a0cbf4fd83da98368b99159999746b445bba4c7ef292ad9",
+            "text": "RapidAPI::requests.get\nThe API returns the number of days,  hours, working days, working hours, wages, weekend days, and the list of public holidays of the requested date period and country. You can also add any number of working days or working hours to a given date. 50 countries and over 230 regional calendars are supported and we work hard to keep our database up to date by following government announcements regarding public holidays changes. All the calendars can be fully customized from our friendly working da...\nparams: {\"required\": [{\"name\": \"country_code\", \"description\": \"The ISO country code (2 letters).  See <a href=https://api.workingdays.org/1.2/api-countries.php>available countries & configurations</a>\", \"type\": \"STRING\"}, {\"name\": \"date\", \"description\": \"The date to analyze (YYYY-MM-DD)\", \"type\": \"STRING\"}, {\"name\": \"configuration\", \"description\": \"The name of the preset configuration to be used. See <a href=https://api.workingdays.org/1.2/api-countries.php>available countries & configurations</a>\", \"type\": \"STRING\"}, {\"name\": \"profile_id\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "country_code",
+                        "description": "The ISO country code (2 letters).  See <a href=https://api.workingdays.org/1.2/api-countries.php>available countries & configurations</a>",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "date",
+                        "description": "The date to analyze (YYYY-MM-DD)",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "configuration",
+                        "description": "The name of the preset configuration to be used. See <a href=https://api.workingdays.org/1.2/api-countries.php>available countries & configurations</a>",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "profile_id",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "The API returns the number of days,  hours, working days, working hours, wages, weekend days, and the list of public holidays of the requested date period and country. You can also add any number of working days or working hours to a given date. 50 countries and over 230 regional calendars are supported and we work hard to keep our database up to date by following government announcements regarding public holidays changes. All the calendars can be fully customized from our friendly working da..."
+        },
+        {
+            "score": 0.4835609197616577,
+            "id": 44,
+            "tool_id": "824b02da118e8259fb0592643fc988e6fc65fb199e0cb702f7e3f1925c43a7f9",
+            "text": "RapidAPI::requests.get\nGet past, present and future holiday data for any country. See more info at https://api-ninjas.com/api/holidays.\nparams: {\"required\": [{\"name\": \"year\", \"description\": \"Calendar year between 2010 and 2030 (inclusive). Note: not all countries are guaranteed contain data going back to 2010.\", \"type\": \"NUMBER\"}, {\"name\": \"country\", \"description\": \"Country name or ISO 3166-2 country code (preferred).\", \"type\": \"STRING\"}, {\"name\": \"type\", \"description\": \"Holiday type filter. Possible values are:\\n\\n- public_holiday\\n- observance\\n- national_holiday\\n- season\\n- state_holiday\\n- optional_holiday\\n- clock_change_daylight_saving_time\\n- local_holiday\\n- united_nations_observance\\n- observance_christian\\n- bank_holiday\\n- common_local_holiday\\n- national_holiday_christian\\n- christian\\n- observance_hebrew\\n- jewish_holiday\\n- muslim\\n- hindu_holiday\\n- restricted_holiday\\n- official_holiday\\n- national_holiday_orthodox\\n- local_observance\\n-\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "year",
+                        "description": "Calendar year between 2010 and 2030 (inclusive). Note: not all countries are guaranteed contain data going back to 2010.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "country",
+                        "description": "Country name or ISO 3166-2 country code (preferred).",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "type",
+                        "description": "Holiday type filter. Possible values are:\n\n- public_holiday\n- observance\n- national_holiday\n- season\n- state_holiday\n- optional_holiday\n- clock_change_daylight_saving_time\n- local_holiday\n- united_nations_observance\n- observance_christian\n- bank_holiday\n- common_local_holiday\n- national_holiday_christian\n- christian\n- observance_hebrew\n- jewish_holiday\n- muslim\n- hindu_holiday\n- restricted_holiday\n- official_holiday\n- national_holiday_orthodox\n- local_observance\n-",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Get past, present and future holiday data for any country. See more info at https://api-ninjas.com/api/holidays."
+        },
+        {
+            "score": 0.4795718789100647,
+            "id": 2657,
+            "tool_id": "3823a9305ca292779cb1a12e7c024988eb5ac5c47f5974a48f84df51ed8b261f",
+            "text": "RapidAPI::requests.get\nIntroducing ForexGo API - the powerful currency exchange solution for developers. Effortlessly integrate real-time forex rates and conversion capabilities into your applications with our easy-to-use API. Enhance your projects with accurate and up-to-date exchange data, empowering users across the globe to make informed financial decisions. Get started with ForexGo API today!\nparams: {\"required\": [{\"name\": \"amount\", \"description\": \"Defines the value of the amount.\", \"type\": \"NUMBER\"}, {\"name\": \"from\", \"description\": \"Supported currencies are listed below.\\n\\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR\", \"type\": \"STRING\"}, {\"name\": \"to\", \"description\": \"Supported currencies are listed below.\\n\\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR\", \"type\": \"STRING\"}, {\"name\": \"date\", \"description\": \"ISO Date format:\\n\\nYYYY-MM-DDTHH:mm:ss.sssZ\\n\\nPull data from requested date.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "amount",
+                        "description": "Defines the value of the amount.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "from",
+                        "description": "Supported currencies are listed below.\n\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "to",
+                        "description": "Supported currencies are listed below.\n\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "date",
+                        "description": "ISO Date format:\n\nYYYY-MM-DDTHH:mm:ss.sssZ\n\nPull data from requested date.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Introducing ForexGo API - the powerful currency exchange solution for developers. Effortlessly integrate real-time forex rates and conversion capabilities into your applications with our easy-to-use API. Enhance your projects with accurate and up-to-date exchange data, empowering users across the globe to make informed financial decisions. Get started with ForexGo API today!"
+        },
+        {
+            "score": 0.47900158166885376,
+            "id": 2057,
+            "tool_id": "48d6b099a23161f5673f9e890018fd88729411d664d798b22acbc0ef12725dcf",
+            "text": "RapidAPI::requests.get\nGet the 30 Euro foreign exchange reference rates in JSON-format. Updated every day at around 16:00 CET by the ECB (European Central Bank).\nparams: {\"required\": [], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [],
+                "optional": []
+            },
+            "description": "Get the 30 Euro foreign exchange reference rates in JSON-format. Updated every day at around 16:00 CET by the ECB (European Central Bank)."
+        },
+        {
+            "score": 0.4772474467754364,
+            "id": 1692,
+            "tool_id": "a2de3bc379839ac4ec3ca35363ae52591c90518214cef9ec87417cec8a089674",
+            "text": "RapidAPI::requests.get\nGet current and historical currency exchange rates with ease. Rates from the European Central Bank, updated every 15 minutes.\nparams: {\"required\": [{\"name\": \"2005_02_03\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "2005_02_03",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Get current and historical currency exchange rates with ease. Rates from the European Central Bank, updated every 15 minutes."
+        },
+        {
+            "score": 0.45919308066368103,
+            "id": 1468,
+            "tool_id": "6bfb722889148b269952c0959814939d729969514a296d4e3740779a87f29ee7",
+            "text": "RapidAPI::requests.get\nGet stocks / market quotes and trends, ETF, international exchanges / forex, crypto,  related news and analytics in real-time.\nparams: {\"required\": [{\"name\": \"from_symbol\", \"description\": \"A 3-Letter currency code / symbol (ISO 4217). For example: *USD*.\", \"type\": \"STRING\"}, {\"name\": \"to_symbol\", \"description\": \"A 3-Letter currency code / symbol (ISO 4217). For example: *EUR*.\", \"type\": \"STRING\"}, {\"name\": \"language\", \"description\": \"The language to use for the results, specified as a 2-letter language code - see [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).\\n\\n**Default**: *en*.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "from_symbol",
+                        "description": "A 3-Letter currency code / symbol (ISO 4217). For example: *USD*.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "to_symbol",
+                        "description": "A 3-Letter currency code / symbol (ISO 4217). For example: *EUR*.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "language",
+                        "description": "The language to use for the results, specified as a 2-letter language code - see [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).\n\n**Default**: *en*.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Get stocks / market quotes and trends, ETF, international exchanges / forex, crypto,  related news and analytics in real-time."
+        },
+        {
+            "score": 0.4554407000541687,
+            "id": 1699,
+            "tool_id": "cfa3dbec63ae753769a0ec0a6fdf8a73704d1399fe6bf04a8914f5a84feb4d6b",
+            "text": "RapidAPI::requests.get\nSimple reliable API for current and historical foreign exchange (forex) currency rates.\nparams: {\"required\": [{\"name\": \"from\", \"description\": \"Three-letter currency code of the currency would would like to convert from. This currency will be converted into the code of the currency provided in the `to` parameter\", \"type\": \"STRING\"}, {\"name\": \"to\", \"description\": \"A comma-separated list of currency codes to convert the `from` parameter into.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "from",
+                        "description": "Three-letter currency code of the currency would would like to convert from. This currency will be converted into the code of the currency provided in the `to` parameter",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "to",
+                        "description": "A comma-separated list of currency codes to convert the `from` parameter into.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Simple reliable API for current and historical foreign exchange (forex) currency rates."
+        },
+        {
+            "score": 0.4544268846511841,
+            "id": 1036,
+            "tool_id": "719f62aa8f3ea8ec7d4a428b4bcccb996c49283543037e838e4ff02382fcf512",
+            "text": "RapidAPI::requests.get\nExchange rates forecast for fiat and crypto. Currency converter with forecast and historical data\nparams: {\"required\": [{\"name\": \"currency\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"currency_cross\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "currency",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "currency_cross",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Exchange rates forecast for fiat and crypto. Currency converter with forecast and historical data"
+        },
+        {
+            "score": 0.44915127754211426,
+            "id": 2289,
+            "tool_id": "310631fd7775a212d99dc4ff6dc6818dbafb70055468a77242307bd9dd5ecc32",
+            "text": "RapidAPI::requests.get\nAn API that will count business days including holidays for the US.\nparams: {\"required\": [{\"name\": \"seconds\", \"description\": \"number of seconds.\", \"type\": \"NUMBER\"}, {\"name\": \"months\", \"description\": \"Number of months\", \"type\": \"NUMBER\"}, {\"name\": \"hours\", \"description\": \"Number of hours.\", \"type\": \"NUMBER\"}, {\"name\": \"days\", \"description\": \"Number of days.\", \"type\": \"NUMBER\"}, {\"name\": \"date\", \"description\": \"Date for arithmetic calculation.\", \"type\": \"STRING\"}, {\"name\": \"minutes\", \"description\": \"Number of minutes.\", \"type\": \"NUMBER\"}, {\"name\": \"years\", \"description\": \"Number of years.\", \"type\": \"NUMBER\"}, {\"name\": \"tz\", \"description\": \"Time Zone. Timezone must be in [IANA](https://bit.ly/3h8wd73) format.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "seconds",
+                        "description": "number of seconds.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "months",
+                        "description": "Number of months",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "hours",
+                        "description": "Number of hours.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "days",
+                        "description": "Number of days.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "date",
+                        "description": "Date for arithmetic calculation.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "minutes",
+                        "description": "Number of minutes.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "years",
+                        "description": "Number of years.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "tz",
+                        "description": "Time Zone. Timezone must be in [IANA](https://bit.ly/3h8wd73) format.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "An API that will count business days including holidays for the US."
+        },
+        {
+            "score": 0.4428844451904297,
+            "id": 2718,
+            "tool_id": "c8783672544823a9b8e3a3e8a4b469ade343aa21a7b323474c98b592da7af780",
+            "text": "RapidAPI::requests.get\nCryptocurrency financial data API for major exchanges. Candlesticks (OHLCV, VWAP, and Trade Count), Trades (tick-level). Spot and futures markets. Robust data catalog and documentation.\nparams: {\"required\": [{\"name\": \"start\", \"description\": \"Start of the requested time period, *%Y-%m-%dT%H:%M:%S* UTC timezone\", \"type\": \"STRING\"}, {\"name\": \"base\", \"description\": \"The second or quote currency in the traded pair\", \"type\": \"STRING\"}, {\"name\": \"market_venue\", \"description\": \"The name of an exchange or a venue\", \"type\": \"STRING\"}, {\"name\": \"symbol\", \"description\": \"The first or base currency in the traded pair\", \"type\": \"STRING\"}, {\"name\": \"end\", \"description\": \"End of the requested time period, *%Y-%m-%dT%H:%M:%S* UTC timezone\", \"type\": \"STRING\"}, {\"name\": \"sort\", \"description\": \"The ordering of results: `asc` (from earliest to latest), `desc` (from latest to earliest)\", \"type\": \"STRING\"}, {\"name\": \"limit\", \"description\": \"Maximum number of records to return, max `10000`\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "start",
+                        "description": "Start of the requested time period, *%Y-%m-%dT%H:%M:%S* UTC timezone",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "base",
+                        "description": "The second or quote currency in the traded pair",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "market_venue",
+                        "description": "The name of an exchange or a venue",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "symbol",
+                        "description": "The first or base currency in the traded pair",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "end",
+                        "description": "End of the requested time period, *%Y-%m-%dT%H:%M:%S* UTC timezone",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "sort",
+                        "description": "The ordering of results: `asc` (from earliest to latest), `desc` (from latest to earliest)",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "limit",
+                        "description": "Maximum number of records to return, max `10000`",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Cryptocurrency financial data API for major exchanges. Candlesticks (OHLCV, VWAP, and Trade Count), Trades (tick-level). Spot and futures markets. Robust data catalog and documentation."
+        },
+        {
+            "score": 0.4402122497558594,
+            "id": 247,
+            "tool_id": "e16ea8ec0d771f1fd9cc225ffdeb723d36aad2e41bf41b23bf7fc22ca2eaa560",
+            "text": "RapidAPI::requests.get\nGet useful statistics on every country in the world. See more info at https://api-ninjas.com/api/country.\nparams: {\"required\": [{\"name\": \"min_area\", \"description\": \"Minimum surface area of country in km2.\", \"type\": \"NUMBER\"}, {\"name\": \"name\", \"description\": \"Plain English name, 2-letter ISO-3166 alpha-2, or 3-letter ISO-3166 alpha-3 code of country.\", \"type\": \"STRING\"}, {\"name\": \"min_fertility\", \"description\": \"Minimum fertility rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"min_gdp_growth\", \"description\": \"Minimum GDP growth rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"limit\", \"description\": \"How many results to return. Must be between **1** and **30**. Default is **5**.\", \"type\": \"NUMBER\"}, {\"name\": \"min_population\", \"description\": \"Minimum population of country.\", \"type\": \"NUMBER\"}, {\"name\": \"max_unemployment\", \"description\": \"Maximum unemployment rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"max_urban_pop_rate\", \"description\": \"Maximum urban population rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"max_population\", \"description\": \"Maximum population of country.\", \"type\": \"NUMBER\"}, {\"name\": \"max_gdp\", \"description\": \"Maximum gross domestic product (GDP) of country, in US Dollars.\", \"type\": \"NUMBER\"}, {\"name\": \"min_urban_pop_rate\", \"description\": \"Minimum urban population rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"min_unemployment\", \"description\": \"Minimum unemployment rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"max_area\", \"description\": \"Maximum surface area of country in km2.\", \"type\": \"NUMBER\"}, {\"name\": \"min_gdp\", \"description\": \"Minimum gross domestic product (GDP) of country, in US Dollars.\", \"type\": \"NUMBER\"}, {\"name\": \"min_infant_mortality\", \"description\": \"Minimum infant mortality rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"max_gdp_growth\", \"description\": \"Maximum GDP growth rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"max_infant_mortality\", \"description\": \"Maximum infant mortality rate in %.\", \"type\": \"NUMBER\"}, {\"name\": \"currency\", \"description\": \"3-letter currency code of country (e.g. **USD**).\", \"type\": \"STRING\"}, {\"name\": \"max_fertility\", \"description\": \"Maximum fertility rate in %.\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "min_area",
+                        "description": "Minimum surface area of country in km2.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "name",
+                        "description": "Plain English name, 2-letter ISO-3166 alpha-2, or 3-letter ISO-3166 alpha-3 code of country.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "min_fertility",
+                        "description": "Minimum fertility rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_gdp_growth",
+                        "description": "Minimum GDP growth rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "limit",
+                        "description": "How many results to return. Must be between **1** and **30**. Default is **5**.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_population",
+                        "description": "Minimum population of country.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_unemployment",
+                        "description": "Maximum unemployment rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_urban_pop_rate",
+                        "description": "Maximum urban population rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_population",
+                        "description": "Maximum population of country.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_gdp",
+                        "description": "Maximum gross domestic product (GDP) of country, in US Dollars.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_urban_pop_rate",
+                        "description": "Minimum urban population rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_unemployment",
+                        "description": "Minimum unemployment rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_area",
+                        "description": "Maximum surface area of country in km2.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_gdp",
+                        "description": "Minimum gross domestic product (GDP) of country, in US Dollars.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_infant_mortality",
+                        "description": "Minimum infant mortality rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_gdp_growth",
+                        "description": "Maximum GDP growth rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_infant_mortality",
+                        "description": "Maximum infant mortality rate in %.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "currency",
+                        "description": "3-letter currency code of country (e.g. **USD**).",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "max_fertility",
+                        "description": "Maximum fertility rate in %.",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Get useful statistics on every country in the world. See more info at https://api-ninjas.com/api/country."
+        }
+    ]
+}
+{
+    "query": "Task 75: Please provide me with the product details and pricing of the item with ASIN B07FR4ZLTD on IHerb. Please accomplish this using the appropriate API tool.",
+    "expected": {
+        "name": "RapidAPI",
+        "api_name": "requests.get",
+        "description": "Query for products using many filters! Filter by price, review, discount percentage, if has stock, etc! Or export a .zip file with all updated products!",
+        "parameters": [
+            {
+                "name": "protocol",
+                "description": "",
+                "type": "string"
+            }
+        ]
+    },
+    "topk": [
+        {
+            "score": 0.5452409982681274,
+            "id": 2702,
+            "tool_id": "0f098ea73f4ffe807a627d244b9a2749b4da5d21925f56f0afc7cafbaa26b7d9",
+            "text": "RapidAPI::requests.get\nIncrease your e-commerce business with this API, we offer all services that you **need**<br>1.  product detail from product ID<br>2.  shipping information<br>3.  detect the new future nuggets<br>4.  trend and hitoric of sales and price on more than **80000** products (best products)<br>5.  Request the products by categories filter by **brands** and **attributes**<br>\nparams: {\"required\": [{\"name\": \"productid\", \"description\": \"The Aliexpress product ID\", \"type\": \"NUMBER\"}, {\"name\": \"targetcurrency\", \"description\": \"Represents the currency whished when the product is retrieved\", \"type\": \"STRING\"}, {\"name\": \"lg\", \"description\": \"Represents the language wished when displaying the single product. He must compliant with ISO 639-1 either have two digits\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "productid",
+                        "description": "The Aliexpress product ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "targetcurrency",
+                        "description": "Represents the currency whished when the product is retrieved",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "lg",
+                        "description": "Represents the language wished when displaying the single product. He must compliant with ISO 639-1 either have two digits",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Increase your e-commerce business with this API, we offer all services that you **need**<br>1.  product detail from product ID<br>2.  shipping information<br>3.  detect the new future nuggets<br>4.  trend and hitoric of sales and price on more than **80000** products (best products)<br>5.  Request the products by categories filter by **brands** and **attributes**<br>"
+        },
+        {
+            "score": 0.48058179020881653,
+            "id": 3134,
+            "tool_id": "fc9908c7aa900e9e2406ebedf0fbd892fa5ff24b7ba308c61a6dd0248b8e32a4",
+            "text": "RapidAPI::requests.get\nAmazon, Ebay, Target, Walmart, Google - price & product data from all marketplaces via one API. The Price Comparison API provides price & product data incl. product title, manufacturer, sellers, reviews, prices, size selection etc.\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"An identifier can be any of the following:\\n\\n- UPC\\n- EAN\\n- ISBN\\n- GTIN\\n- Amazon ASIN\", \"type\": \"string\"}, {\"name\": \"latitude\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"longitude\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"country\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "An identifier can be any of the following:\n\n- UPC\n- EAN\n- ISBN\n- GTIN\n- Amazon ASIN",
+                        "type": "string"
+                    },
+                    {
+                        "name": "latitude",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "longitude",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "country",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Amazon, Ebay, Target, Walmart, Google - price & product data from all marketplaces via one API. The Price Comparison API provides price & product data incl. product title, manufacturer, sellers, reviews, prices, size selection etc."
+        },
+        {
+            "score": 0.4664694666862488,
+            "id": 1296,
+            "tool_id": "776bb68eb96ca1ac19a629ed15900b757c29be500b2bd7115564aac3c2d2b0fb",
+            "text": "RapidAPI::requests.get\nOur Otto Data Service API provides real-time data about product details, keyword search result and reviews from the german online shop Otto.de.\nparams: {\"required\": [{\"name\": \"page\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"productid\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"sortby\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "page",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "productid",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "sortby",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Our Otto Data Service API provides real-time data about product details, keyword search result and reviews from the german online shop Otto.de."
+        },
+        {
+            "score": 0.4539545476436615,
+            "id": 598,
+            "tool_id": "81331808d5d4c64a4321077b571a8b5424fe6fd468cc8816f6adfe54b9163923",
+            "text": "RapidAPI::requests.get\nEmpower your business by letting your customers buy, sell, and exchange crypto. You will earn % on every transaction. 400+ cryptocurrencies and 75+ fiats are available. IMPORTANT: You should get your API key by creating a partner's account here: changenow.io/affiliate. Or email us: partners@changenow.io. \nparams: {\"required\": [{\"name\": \"from_to\", \"description\": \"(Required) Underscore separated pair of tickers\", \"type\": \"STRING\"}, {\"name\": \"api_key\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"userateid\", \"description\": \"(Optional) Use rateId for fixed-rate flow. If this field is true, you could use returned field \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"rateId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" in next method for creating transaction to freeze estimated amount that you got in this method. Current estimated amount would be valid until time in field \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"validUntil\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "from_to",
+                        "description": "(Required) Underscore separated pair of tickers",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "api_key",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "userateid",
+                        "description": "(Optional) Use rateId for fixed-rate flow. If this field is true, you could use returned field \\\\\\\\\\\\\\\"rateId\\\\\\\\\\\\\\\" in next method for creating transaction to freeze estimated amount that you got in this method. Current estimated amount would be valid until time in field \\\\\\\\\\\\\\\"validUntil\\\\\\\\\\\\\\\"",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Empower your business by letting your customers buy, sell, and exchange crypto. You will earn % on every transaction. 400+ cryptocurrencies and 75+ fiats are available. IMPORTANT: You should get your API key by creating a partner's account here: changenow.io/affiliate. Or email us: partners@changenow.io. "
+        },
+        {
+            "score": 0.4462645649909973,
+            "id": 2355,
+            "tool_id": "41d9265d16922d466c7ed8e224fb31150334f02166f2d7d5889c3d4049f47b2d",
+            "text": "RapidAPI::requests.get\nFast and Simple API to search for products, offers and reviews on Amazon in real-time.\nparams: {\"required\": [{\"name\": \"asin\", \"description\": \"Product ASIN for which to get details. Supports batching of up to 10 ASINs in a single request, separated by comma (e.g. *B08PPDJWC8,B07ZPKBL9V, B08BHXG144*).\\n\\nNote that each ASIN in a batch request is counted as a single request against the plan quota.\", \"type\": \"STRING\"}, {\"name\": \"country\", \"description\": \"Sets the marketplace country, language and currency. \\n\\n**Default:** `US`\\n\\n**Allowed values:**  `US, AU, BR, CA, CN, FR, DE, IN, IT, MX, NL, SG, ES, TR, AE, GB, JP`\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "asin",
+                        "description": "Product ASIN for which to get details. Supports batching of up to 10 ASINs in a single request, separated by comma (e.g. *B08PPDJWC8,B07ZPKBL9V, B08BHXG144*).\n\nNote that each ASIN in a batch request is counted as a single request against the plan quota.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "country",
+                        "description": "Sets the marketplace country, language and currency. \n\n**Default:** `US`\n\n**Allowed values:**  `US, AU, BR, CA, CN, FR, DE, IN, IT, MX, NL, SG, ES, TR, AE, GB, JP`",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Fast and Simple API to search for products, offers and reviews on Amazon in real-time."
+        },
+        {
+            "score": 0.44246989488601685,
+            "id": 849,
+            "tool_id": "36044ccd526210f6dbc0ee045a1b971810773cd58e84ff5739ebee3535e05e15",
+            "text": "RapidAPI::requests.get\nB2BHint is a business tool that provides access to official registry data on companies and the people associated with them. With B2BHint, everyone can easily search and explore information on companies, making informed decisions and growing their business.\nparams: {\"required\": [{\"name\": \"q\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"countrycode\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "q",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "countrycode",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "B2BHint is a business tool that provides access to official registry data on companies and the people associated with them. With B2BHint, everyone can easily search and explore information on companies, making informed decisions and growing their business."
+        },
+        {
+            "score": 0.4405367970466614,
+            "id": 428,
+            "tool_id": "7df966650e3ee8984978bf49abf15e6a60690e35f05c92840d112cbcc80ea2e7",
+            "text": "RapidAPI::requests.get\nShopee product search api & product details api\nparams: {\"required\": [{\"name\": \"region\", \"description\": \"The region must one of [\\\\\\\\\\\\\\\"en\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"sg\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"my\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"th\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"vn\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"ph\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"tw\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"br\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"cl\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"mx\\\\\\\\\\\\\\\", \\\\\\\\\\\\\\\"co\\\\\\\\\\\\\\\"]\", \"type\": \"string\"}, {\"name\": \"q\", \"description\": \"A product search query\", \"type\": \"STRING\"}, {\"name\": \"p\", \"description\": \"Page number\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "region",
+                        "description": "The region must one of [\\\\\\\"en\\\\\\\", \\\\\\\"sg\\\\\\\", \\\\\\\"my\\\\\\\", \\\\\\\"id\\\\\\\", \\\\\\\"th\\\\\\\", \\\\\\\"vn\\\\\\\", \\\\\\\"ph\\\\\\\", \\\\\\\"tw\\\\\\\", \\\\\\\"br\\\\\\\", \\\\\\\"cl\\\\\\\", \\\\\\\"mx\\\\\\\", \\\\\\\"co\\\\\\\"]",
+                        "type": "string"
+                    },
+                    {
+                        "name": "q",
+                        "description": "A product search query",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "p",
+                        "description": "Page number",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Shopee product search api & product details api"
+        },
+        {
+            "score": 0.4370436668395996,
+            "id": 1859,
+            "tool_id": "0493696c1ec18f369983c09e2ca16a853639b7d3bb8b6b567500e0537984e12b",
+            "text": "RapidAPI::requests.get\nLookup product data and pricing for over 635 million unique items by UPC, EAN, ISBN codes or search terms.\nparams: {\"required\": [{\"name\": \"asin\", \"description\": \"ASIN\", \"type\": \"STRING\"}, {\"name\": \"page\", \"description\": \"Page number for any search query (10 results per page)\", \"type\": \"STRING\"}, {\"name\": \"barcode\", \"description\": \"UPC, EAN or ISBN number\", \"type\": \"NUMBER\"}, {\"name\": \"mpn\", \"description\": \"Manufacturer Part Number\", \"type\": \"STRING\"}, {\"name\": \"search\", \"description\": \"Any search term or phrase\", \"type\": \"STRING\"}, {\"name\": \"category\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"title\", \"description\": \"Product Name\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "asin",
+                        "description": "ASIN",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "page",
+                        "description": "Page number for any search query (10 results per page)",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "barcode",
+                        "description": "UPC, EAN or ISBN number",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "mpn",
+                        "description": "Manufacturer Part Number",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "search",
+                        "description": "Any search term or phrase",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "category",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "title",
+                        "description": "Product Name",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Lookup product data and pricing for over 635 million unique items by UPC, EAN, ISBN codes or search terms."
+        },
+        {
+            "score": 0.4340987801551819,
+            "id": 2368,
+            "tool_id": "9942e63727b514f07c09f319219ec41fe4f035c126f6a69cdf0a47f33a54dcf3",
+            "text": "RapidAPI::requests.get\nASR Hub is a nomalized XML API which integrates airline content from multiple sources like Direct &amp; NDC connect, Multi-GDS and aggregators from various markets and  offers search, ticket, Payments, ancillary sales, and post bookings services through a single API.  ASR Hub 1.0 provides the complete Travel Tech Stack for Airline Retailing​.\nparams: {\"required\": [{\"name\": \"mfref\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "mfref",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "ASR Hub is a nomalized XML API which integrates airline content from multiple sources like Direct &amp; NDC connect, Multi-GDS and aggregators from various markets and  offers search, ticket, Payments, ancillary sales, and post bookings services through a single API.  ASR Hub 1.0 provides the complete Travel Tech Stack for Airline Retailing​."
+        },
+        {
+            "score": 0.43253135681152344,
+            "id": 2655,
+            "tool_id": "4630515cf34865a8bdadeb3749c4b069d29795e5adb8ed0f5949876e06441b1f",
+            "text": "RapidAPI::requests.get\nmarket data for used apple products\nparams: {\"required\": [{\"name\": \"manufacturernumbase64encoded\", \"description\": \"A manufacturer number of an apple product, base64 encoded, e.g for a Apple MacBook Pro 13\\\\\\\\\\\\\\\" 2020 with manufacturer number MWP72D/A -> TVdQNzJEL0E=\", \"type\": \"string\"}, {\"name\": \"condition\", \"description\": \"ENUM, valid values are: USED, NEW, DEFECT, REFURBISHED\\n\\nNote: Until now in v1, only values USED and REFURBISHED are allowed and give the same results (no distringuish between USED or REFURBISHED, so use any of the two.\\nIn a future release, the other values will be also supported.\", \"type\": \"ENUM\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "manufacturernumbase64encoded",
+                        "description": "A manufacturer number of an apple product, base64 encoded, e.g for a Apple MacBook Pro 13\\\\\\\" 2020 with manufacturer number MWP72D/A -> TVdQNzJEL0E=",
+                        "type": "string"
+                    },
+                    {
+                        "name": "condition",
+                        "description": "ENUM, valid values are: USED, NEW, DEFECT, REFURBISHED\n\nNote: Until now in v1, only values USED and REFURBISHED are allowed and give the same results (no distringuish between USED or REFURBISHED, so use any of the two.\nIn a future release, the other values will be also supported.",
+                        "type": "ENUM"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "market data for used apple products"
+        },
+        {
+            "score": 0.43079984188079834,
+            "id": 2402,
+            "tool_id": "7c8c91371e4d7256a2fe264b3bff426160ee2259482b75e7425de413908bb536",
+            "text": "RapidAPI::requests.get\nExtremely comprehensive and up-to-date local business search - get business reviews and rating, photos, phone, address / location, website, emails / social profiles and 30+ other fields.\nparams: {\"required\": [{\"name\": \"business_id\", \"description\": \"Unique Business Id of the business for which to get reviews.\", \"type\": \"STRING\"}, {\"name\": \"sort_by\", \"description\": \"How to sort the reviews in the results.\\n\\n**Allowed values**: *`most_relevant, newest, highest_ranking, lowest_ranking`*.\\n\\n**Default**: *`most_relevant`*\", \"type\": \"ENUM\"}, {\"name\": \"region\", \"description\": \"Query Google Maps from a particular region or country. For a list of supported region/country codes see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (Alpha-2 code).\\n\\n**Default:** *`us`*\", \"type\": \"STRING\"}, {\"name\": \"language\", \"description\": \"Set the language of the results. For a list of supported language codes see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes .\\n\\n**Default**: *`en`*\", \"type\": \"STRING\"}, {\"name\": \"offset\", \"description\": \"Number of business reviews to skip (for pagination/scrolling).\\n\\n**Default**: *`0`*\", \"type\": \"NUMBER\"}, {\"name\": \"fields\", \"description\": \"A comma separated list of review fields to include in the response (field projection). By default all fields are returned.\\n\\n**e.g.** `review_id,review_text,rating`\", \"type\": \"STRING\"}, {\"name\": \"query\", \"description\": \"Return reviews matching a text query.\", \"type\": \"STRING\"}, {\"name\": \"limit\", \"description\": \"Maximum number of business reviews to return (1-150).\\n\\n**Default**: *`20`*\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "business_id",
+                        "description": "Unique Business Id of the business for which to get reviews.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "sort_by",
+                        "description": "How to sort the reviews in the results.\n\n**Allowed values**: *`most_relevant, newest, highest_ranking, lowest_ranking`*.\n\n**Default**: *`most_relevant`*",
+                        "type": "ENUM"
+                    },
+                    {
+                        "name": "region",
+                        "description": "Query Google Maps from a particular region or country. For a list of supported region/country codes see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (Alpha-2 code).\n\n**Default:** *`us`*",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "language",
+                        "description": "Set the language of the results. For a list of supported language codes see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes .\n\n**Default**: *`en`*",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "offset",
+                        "description": "Number of business reviews to skip (for pagination/scrolling).\n\n**Default**: *`0`*",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "fields",
+                        "description": "A comma separated list of review fields to include in the response (field projection). By default all fields are returned.\n\n**e.g.** `review_id,review_text,rating`",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "query",
+                        "description": "Return reviews matching a text query.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "limit",
+                        "description": "Maximum number of business reviews to return (1-150).\n\n**Default**: *`20`*",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Extremely comprehensive and up-to-date local business search - get business reviews and rating, photos, phone, address / location, website, emails / social profiles and 30+ other fields."
+        },
+        {
+            "score": 0.4255245625972748,
+            "id": 1809,
+            "tool_id": "69572d8d49e12a5d0be279981f25e0a2ea9fa0772a442247c10e6f18019f6c5c",
+            "text": "RapidAPI::requests.get\nUnofficial Listings API for blur.io\n\n- For Blur V1 endpoints use this API: https://rapidapi.com/openseatools/api/opensea15\n\n- Crypto Payments Available\n\n- Lifetime Unlimited Requests Licenses Available\n\n- Private Plans with 16 / 32 / 64 / 128  requests/second Available\n\n- Ready made bots written in node.js already configured to work with RapidApi Available.\n\nJoin our Discord to inquire & find out the latest information and tools: \n\nhttps://discord.gg/Yezs2VDhBV\nparams: {\"required\": [{\"name\": \"pagesize\", \"description\": \"\", \"type\": \"NUMBER\"}, {\"name\": \"pagenumber\", \"description\": \"\", \"type\": \"NUMBER\"}, {\"name\": \"orderby\", \"description\": \"Listing Price: ASC or DESC\", \"type\": \"STRING\"}, {\"name\": \"contractaddress\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "pagesize",
+                        "description": "",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "pagenumber",
+                        "description": "",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "orderby",
+                        "description": "Listing Price: ASC or DESC",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "contractaddress",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Unofficial Listings API for blur.io\n\n- For Blur V1 endpoints use this API: https://rapidapi.com/openseatools/api/opensea15\n\n- Crypto Payments Available\n\n- Lifetime Unlimited Requests Licenses Available\n\n- Private Plans with 16 / 32 / 64 / 128  requests/second Available\n\n- Ready made bots written in node.js already configured to work with RapidApi Available.\n\nJoin our Discord to inquire & find out the latest information and tools: \n\nhttps://discord.gg/Yezs2VDhBV"
+        },
+        {
+            "score": 0.421642005443573,
+            "id": 1946,
+            "tool_id": "778e38324b06ccfbcdfe098f8cb965bfb2d8306d7fbccfafc4af3c105a331a08",
+            "text": "RapidAPI::requests.get\nOur free API provides real-time and historical crypto trading data from 4 major exchanges, enriched with over 30 customizable trading indicators. It offers up to 5000 rows of data in a single request, ensuring comprehensive market analysis. The API is user-friendly and offers improved data fetching capabilities compared to standard exchange documentation, making it an essential tool for traders and developers alike.\nparams: {\"required\": [{\"name\": \"symbol\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"exchange\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"market\", \"description\": \"Available markets are:\\n\\nspot\\nusdt-perpetual\\ninverse-perpetual\", \"type\": \"STRING\"}, {\"name\": \"interval\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"from\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"backtracks\", \"description\": \"\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "symbol",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "exchange",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "market",
+                        "description": "Available markets are:\n\nspot\nusdt-perpetual\ninverse-perpetual",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "interval",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "from",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "backtracks",
+                        "description": "",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Our free API provides real-time and historical crypto trading data from 4 major exchanges, enriched with over 30 customizable trading indicators. It offers up to 5000 rows of data in a single request, ensuring comprehensive market analysis. The API is user-friendly and offers improved data fetching capabilities compared to standard exchange documentation, making it an essential tool for traders and developers alike."
+        }
+    ]
+}
+{
+    "query": "Task 95: Can you please provide the details for a user with ID=7 from the Reqres API? Please accomplish this using the appropriate API tool.",
+    "expected": {
+        "name": "RapidAPI",
+        "api_name": "requests.get",
+        "description": "",
+        "parameters": []
+    },
+    "topk": [
+        {
+            "score": 0.48209789395332336,
+            "id": 294,
+            "tool_id": "971375e8f5c43fd70e44c7f6c056a497381e605e1c36613e904a091072596243",
+            "text": "RapidAPI::requests.get\noDesk APIs allowed for authorized users to can access and build their own oDesk applications.\nparams: {\"required\": [{\"name\": \"code1_code2_coden_format\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"code1;code2;...;coden\", \"description\": \"The specific task codes, the list of codes should be separated with \\\";\\\"\", \"type\": \"STRING\"}, {\"name\": \"format\", \"description\": \"formation of response\", \"type\": \"STRING\"}, {\"name\": \"company\", \"description\": \"The company ID\", \"type\": \"NUMBER\"}, {\"name\": \"team\", \"description\": \"The team ID\", \"type\": \"NUMBER\"}, {\"name\": \"username\", \"description\": \"The username of the target user account\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "code1_code2_coden_format",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "code1;code2;...;coden",
+                        "description": "The specific task codes, the list of codes should be separated with \";\"",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "format",
+                        "description": "formation of response",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "company",
+                        "description": "The company ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "team",
+                        "description": "The team ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "username",
+                        "description": "The username of the target user account",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "oDesk APIs allowed for authorized users to can access and build their own oDesk applications."
+        },
+        {
+            "score": 0.4733269512653351,
+            "id": 2141,
+            "tool_id": "0a879d9e1bf8cf89c5375434a9126d075ce125f71e2e7c08147d98af0e24889b",
+            "text": "RapidAPI::requests.get\nSocial Media Data API in Real-Time.   -Get very useful and unique information.  -I'm on Telegram https://t.me/logicBuilder News and announcements Telegram Channel https://t.me/logicApi\nparams: {\"required\": [{\"name\": \"video_id\", \"description\": \"Where to get vide id value?\\n\\nFor example in this video /@INFLUENCER/video/6818009093052189958 the id will be **6818009093052189958**\", \"type\": \"STRING\"}, {\"name\": \"fresh\", \"description\": \"By setting this query value to **1** you can force the API to return fresh data(not cached)\", \"type\": \"NUMBER\"}, {\"name\": \"limit\", \"description\": \"Number of records to return:\\n\\n- Default is 50\\n- Maximum is 150\", \"type\": \"NUMBER\"}, {\"name\": \"max_cursor\", \"description\": \"Pagination cursor\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "video_id",
+                        "description": "Where to get vide id value?\n\nFor example in this video /@INFLUENCER/video/6818009093052189958 the id will be **6818009093052189958**",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "fresh",
+                        "description": "By setting this query value to **1** you can force the API to return fresh data(not cached)",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "limit",
+                        "description": "Number of records to return:\n\n- Default is 50\n- Maximum is 150",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_cursor",
+                        "description": "Pagination cursor",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Social Media Data API in Real-Time.   -Get very useful and unique information.  -I'm on Telegram https://t.me/logicBuilder News and announcements Telegram Channel https://t.me/logicApi"
+        },
+        {
+            "score": 0.4530383348464966,
+            "id": 446,
+            "tool_id": "554c40a07d466a85372c204d33105a977d33d6cb2a02ea8929491545bd4afa3a",
+            "text": "RapidAPI::requests.get\nTwitter public and private data API for search, Tweets, users, followers, images, media and more.\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"User ID\\n\\nUse the `User By Screen Name` endpoint to find the ID from a username.\", \"type\": \"STRING\"}, {\"name\": \"cursor\", \"description\": \"Cursor for other results\", \"type\": \"STRING\"}, {\"name\": \"count\", \"description\": \"Number of results\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "User ID\n\nUse the `User By Screen Name` endpoint to find the ID from a username.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "cursor",
+                        "description": "Cursor for other results",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "count",
+                        "description": "Number of results",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Twitter public and private data API for search, Tweets, users, followers, images, media and more."
+        },
+        {
+            "score": 0.4517301917076111,
+            "id": 2345,
+            "tool_id": "2edb739b0e2fe72b140f16e1cbdcd7171021459c9ae7fcca1012b1f5d515349a",
+            "text": "RapidAPI::requests.get\nSimSimi database consists of simple \"Request - Response\" set.\r\nWhen you request \"Hi\", SimSimi API send \"response\" by similarity with request sentence\r\n\r\nConversation API enables you to get SimSimi's response data\nparams: {\"required\": [{\"name\": \"text\", \"description\": \"Query message\", \"type\": \"STRING\"}, {\"name\": \"lc\", \"description\": \"Language code\", \"type\": \"STRING\"}, {\"name\": \"ft\", \"description\": \"Sexual Contents\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "text",
+                        "description": "Query message",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "lc",
+                        "description": "Language code",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "ft",
+                        "description": "Sexual Contents",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "SimSimi database consists of simple \"Request - Response\" set.\r\nWhen you request \"Hi\", SimSimi API send \"response\" by similarity with request sentence\r\n\r\nConversation API enables you to get SimSimi's response data"
+        },
+        {
+            "score": 0.44831904768943787,
+            "id": 2541,
+            "tool_id": "eabe921acb225cb88b8fbd94f38429ad30c60e175269a20e2d6d9f2629971b24",
+            "text": "RapidAPI::requests.get\nuser url endpoint\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "user url endpoint"
+        },
+        {
+            "score": 0.44478756189346313,
+            "id": 677,
+            "tool_id": "5e520f0abb28e4e1e17b450141de3d47b6ca2119d9cf8347ed7d9e6991168b1f",
+            "text": "RapidAPI::requests.get\nAn API that allows users to be stored, retrieved, and deleted from a database.\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"\", \"type\": \"string\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "An API that allows users to be stored, retrieved, and deleted from a database."
+        },
+        {
+            "score": 0.4413334131240845,
+            "id": 1046,
+            "tool_id": "a1ef20715719e7acac1ea260aec2b1f386595b1dc568fecfcc3c4c84d2d450b5",
+            "text": "RapidAPI::requests.get\nThis API helps to query for football, cricket, basketball, tennis, hockey matches, leagues, news, etc... to create a sporting site/application such as livescore.com\nparams: {\"required\": [{\"name\": \"eid\", \"description\": \"The value of Eid field returned in .../matches/v2/list-by-league or .../matches/v2/list-by-date or .../matches/v2/list-live endpoints\", \"type\": \"NUMBER\"}, {\"name\": \"category\", \"description\": \"One of the followings : soccer|cricket|basketball|tennis|hockey\", \"type\": \"STRING\"}, {\"name\": \"timezone\", \"description\": \"One of the following : -11|-10|-9.5|-9|-8.5|-8|-7|-6|-5|-4.5|-4|-3.5|-3|-2.5|-2|-1|0|1|2|3|3.5|4|4.5|5|5.5|5.75|6|6.5|6.75|7|7.5|8|8.5|8.75|9|9.5|9.75|10|10.5|11|11.5|12|12.5|12.75|13|13.75|14\", \"type\": \"NUMBER\"}, {\"name\": \"livetable\", \"description\": \"true|false - Whether or not include live table relating to current match\", \"type\": \"BOOLEAN\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "eid",
+                        "description": "The value of Eid field returned in .../matches/v2/list-by-league or .../matches/v2/list-by-date or .../matches/v2/list-live endpoints",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "category",
+                        "description": "One of the followings : soccer|cricket|basketball|tennis|hockey",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "timezone",
+                        "description": "One of the following : -11|-10|-9.5|-9|-8.5|-8|-7|-6|-5|-4.5|-4|-3.5|-3|-2.5|-2|-1|0|1|2|3|3.5|4|4.5|5|5.5|5.75|6|6.5|6.75|7|7.5|8|8.5|8.75|9|9.5|9.75|10|10.5|11|11.5|12|12.5|12.75|13|13.75|14",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "livetable",
+                        "description": "true|false - Whether or not include live table relating to current match",
+                        "type": "BOOLEAN"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "This API helps to query for football, cricket, basketball, tennis, hockey matches, leagues, news, etc... to create a sporting site/application such as livescore.com"
+        },
+        {
+            "score": 0.44036224484443665,
+            "id": 2822,
+            "tool_id": "2bdd7250d2fc0eb7b281c109daf629287729c27950496bd4dc28b79a115b6714",
+            "text": "RapidAPI::requests.get\nReqres\nparams: {\"required\": [{\"name\": \"page\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "page",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Reqres"
+        },
+        {
+            "score": 0.4397026598453522,
+            "id": 2447,
+            "tool_id": "3b3786b571ad160b9e7047b2124176993411a2a92ff579ef94c60391613a9eab",
+            "text": "RapidAPI::requests.get\nThis is the description\nparams: {\"required\": [{\"name\": \"secret\", \"description\": \"Your API Secret that you get from your account on our website\", \"type\": \"STRING\"}, {\"name\": \"match_id\", \"description\": \"Match ID\", \"type\": \"NUMBER\"}, {\"name\": \"key\", \"description\": \"Your API Key that you get from your account on our website API key\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "secret",
+                        "description": "Your API Secret that you get from your account on our website",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "match_id",
+                        "description": "Match ID",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "key",
+                        "description": "Your API Key that you get from your account on our website API key",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "This is the description"
+        },
+        {
+            "score": 0.4393693804740906,
+            "id": 1265,
+            "tool_id": "ff2d0beaaab8b54aba9faf05048799ef5925ec6c13b7a66bdfadad62134b628b",
+            "text": "RapidAPI::requests.get\nQuestion API with 500+ questions, 8 categories and 3 difficulties for your apps.\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"\", \"type\": \"string\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Question API with 500+ questions, 8 categories and 3 difficulties for your apps."
+        },
+        {
+            "score": 0.4379400610923767,
+            "id": 894,
+            "tool_id": "6b85e1fee78ebcce9a6261cc3284c82b1032f2727df1889366f9758f3d706926",
+            "text": "RapidAPI::requests.get\nSMS Service Provider\nparams: {\"required\": [{\"name\": \"password\", \"description\": \"Your SensSMS Api Key\", \"type\": \"STRING\"}, {\"name\": \"to\", \"description\": \"Destination Phone Number\", \"type\": \"NUMBER\"}, {\"name\": \"text\", \"description\": \"SMS Content\", \"type\": \"STRING\"}, {\"name\": \"action\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"username\", \"description\": \"Your SensSMS User Name\", \"type\": \"STRING\"}, {\"name\": \"from\", \"description\": \"Message Sender\", \"type\": \"STRING\"}, {\"name\": \"report_mask\", \"description\": \"Report Mask\", \"type\": \"NUMBER\"}, {\"name\": \"report_url\", \"description\": \"http://sendsms.ro/r_r.php?mySmsId=9876&status=%d\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "password",
+                        "description": "Your SensSMS Api Key",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "to",
+                        "description": "Destination Phone Number",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "text",
+                        "description": "SMS Content",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "action",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "username",
+                        "description": "Your SensSMS User Name",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "from",
+                        "description": "Message Sender",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "report_mask",
+                        "description": "Report Mask",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "report_url",
+                        "description": "http://sendsms.ro/r_r.php?mySmsId=9876&status=%d",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "SMS Service Provider"
+        },
+        {
+            "score": 0.4350188076496124,
+            "id": 1586,
+            "tool_id": "c81ef853226b708ea62447a814ee7a3e9ee139128c360cb1c28383fb3a8e2250",
+            "text": "RapidAPI::requests.get\nDetailed technical specs on over 1000 airplane models. See more info at https://api-ninjas.com/api/aircraft\nparams: {\"required\": [{\"name\": \"min_height\", \"description\": \"Minimum height of the aircraft in feet.\", \"type\": \"NUMBER\"}, {\"name\": \"min_wingspan\", \"description\": \"Minimum wingspan of the aircraft in feet.\", \"type\": \"NUMBER\"}, {\"name\": \"limit\", \"description\": \"How many results to return. Must be between 1 and 30. Default is 1.\", \"type\": \"NUMBER\"}, {\"name\": \"max_height\", \"description\": \"Maximum height of the aircraft in feet.\", \"type\": \"NUMBER\"}, {\"name\": \"max_length\", \"description\": \"Maximum length of the aircraft in feet.\", \"type\": \"NUMBER\"}, {\"name\": \"min_length\", \"description\": \"Minimum length of the aircraft in feet.\", \"type\": \"NUMBER\"}, {\"name\": \"max_range\", \"description\": \"Maximum range of the aircraft in nautical miles.\", \"type\": \"NUMBER\"}, {\"name\": \"min_range\", \"description\": \"Minimum range of the aircraft in nautical miles.\", \"type\": \"NUMBER\"}, {\"name\": \"max_speed\", \"description\": \"Maximum max. air speed in knots.\", \"type\": \"NUMBER\"}, {\"name\": \"max_wingspan\", \"description\": \"Maximum wingspan of the aircraft in feet.\", \"type\": \"NUMBER\"}, {\"name\": \"engine_type\", \"description\": \"Type of engine. Must be one of: piston, propjet, jet.\", \"type\": \"STRING\"}, {\"name\": \"min_speed\", \"description\": \"Minimum max. air speed in knots.\", \"type\": \"NUMBER\"}, {\"name\": \"model\", \"description\": \"Aircraft model name.\", \"type\": \"STRING\"}, {\"name\": \"manufacturer\", \"description\": \"Company that designed and built the aircraft.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "min_height",
+                        "description": "Minimum height of the aircraft in feet.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_wingspan",
+                        "description": "Minimum wingspan of the aircraft in feet.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "limit",
+                        "description": "How many results to return. Must be between 1 and 30. Default is 1.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_height",
+                        "description": "Maximum height of the aircraft in feet.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_length",
+                        "description": "Maximum length of the aircraft in feet.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_length",
+                        "description": "Minimum length of the aircraft in feet.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_range",
+                        "description": "Maximum range of the aircraft in nautical miles.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "min_range",
+                        "description": "Minimum range of the aircraft in nautical miles.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_speed",
+                        "description": "Maximum max. air speed in knots.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "max_wingspan",
+                        "description": "Maximum wingspan of the aircraft in feet.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "engine_type",
+                        "description": "Type of engine. Must be one of: piston, propjet, jet.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "min_speed",
+                        "description": "Minimum max. air speed in knots.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "model",
+                        "description": "Aircraft model name.",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "manufacturer",
+                        "description": "Company that designed and built the aircraft.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Detailed technical specs on over 1000 airplane models. See more info at https://api-ninjas.com/api/aircraft"
+        },
+        {
+            "score": 0.43494880199432373,
+            "id": 499,
+            "tool_id": "78fc40cc58215af61e596b09eac2c647463a04c38ae7dc2544db1afaf1358151",
+            "text": "RapidAPI::requests.get\nThis Project is created by the onboarding process\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"\", \"type\": \"NUMBER\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "",
+                        "type": "NUMBER"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "This Project is created by the onboarding process"
+        }
+    ]
+}
