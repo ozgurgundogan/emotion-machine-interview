@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Selector Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Tool Selector Companion</h1>
+        <p>Ask for a task; we pick the right API tool.</p>
+      </div>
+      <div class="endpoint">
+        <label for="backend">Backend URL</label>
+        <input id="backend" type="text" value="http://localhost:8000/api/query">
+        <label class="stream-toggle">
+          <input id="use-stream" type="checkbox" checked>
+          Use Stream
+        </label>
+      </div>
+    </header>
+
+    <main id="chat"></main>
+
+    <form id="chat-form">
+      <textarea id="prompt" rows="3" placeholder="Describe what you want to do..." required></textarea>
+      <div class="actions">
+        <button type="submit">Send</button>
+        <span id="status"></span>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
