@@ -8,12 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from src.client import ToolSelectorClient
-from src.environment import RESPONSE_RETRIEVAL_COUNT
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-INDEX_FILE = PROJECT_ROOT / "index" / "faiss.index"
-METADATA_FILE = PROJECT_ROOT / "index" / "metadata.json"
-
+from src.environment import INDEX_PATH, METADATA_PATH, RESPONSE_RETRIEVAL_COUNT
 
 app = FastAPI(title="Tool Selector Backend", version="0.1.0")
 
@@ -26,7 +21,7 @@ app.add_middleware(
 )
 
 
-AGENT = ToolSelectorClient(index_path=str(INDEX_FILE), metadata_path=str(METADATA_FILE))
+AGENT = ToolSelectorClient(index_path=INDEX_PATH, metadata_path=METADATA_PATH)
 
 async def stream_output(plan):
     text = json.dumps(plan, indent=2, ensure_ascii=False)

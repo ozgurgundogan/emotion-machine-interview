@@ -20,7 +20,7 @@ class Reranker:
 
 
 class OpenAILLMReranker(Reranker):
-    def __init__(self, model="gpt-4o"):
+    def __init__(self, model=None):
         self.model = model or os.getenv("LLM_RERANK_MODEL", DEFAULT_RERANK_MODEL)
         self._client = OpenAI() if os.getenv("OPENAI_API_KEY") else None
 
