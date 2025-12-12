@@ -12,6 +12,7 @@ DATASETS = [
     ("manual_easy",   Path("../data/gorilla_openfunctions_v1_manual_test.json")),
     ("manual_medium", Path("../data/gorilla_openfunctions_v1_manual_test_medium.json")),
     ("manual_hard",   Path("../data/gorilla_openfunctions_v1_manual_test_hard.json")),
+    ("manual_cross",  Path("../data/gorilla_openfunctions_v1_manual_test_cross.json")),
 ]
 
 
