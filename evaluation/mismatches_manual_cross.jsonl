@@ -1,0 +1,1295 @@
+{
+    "query": "Travel + comms context: I already booked flights and hotel. Now send a confirmation email to jane@example.com with the itinerary details. Ignore booking; just send the email.",
+    "expected": {
+        "name": "NotifyEmail",
+        "api_name": "mail.send",
+        "description": "Send an email notification",
+        "parameters": {
+            "required": [
+                {
+                    "name": "to"
+                },
+                {
+                    "name": "subject"
+                },
+                {
+                    "name": "body"
+                }
+            ],
+            "optional": []
+        }
+    },
+    "topk": [
+        {
+            "score": 0.4108572006225586,
+            "id": 2975,
+            "tool_id": "81bf2bf89aa92b5281e6c891bf140add2393eac3155661890787a51e1133a103",
+            "text": "aws::aws.route53domains.resend_contact_reachability_email\nFor operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation resends the confirmation email to the current email address for the registrant contact.\nparams: {\"required\": [{\"name\": \"domain_name\", \"description\": \"The name of the domain for which you want Route 53 to resend a confirmation email to the registrant contact.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.route53domains.resend_contact_reachability_email",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "domain_name",
+                        "description": "The name of the domain for which you want Route 53 to resend a confirmation email to the registrant contact."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation resends the confirmation email to the current email address for the registrant contact."
+        },
+        {
+            "score": 0.39073866605758667,
+            "id": 3061,
+            "tool_id": "828a3fb8425fba9f9c4ac8cb2643873b55aa0adbaf1b141bbb485f9aa43f0e86",
+            "text": "aws::aws.ses.set_identity_mail_from_domain\nEnables or disables the custom MAIL FROM domain setup for a verified identity (an email address or a domain).WarningTo send emails using the specified MAIL FROM domain, you must add an MX record to your MAIL FROM domainâs DNS settings. To ensure that your emails pass Sender Policy Framework (SPF) checks, you must also add or update an SPF record. For more information, see the Amazon SES Developer Guide .See also: AWS API Documentation\n\nparams: {\"required\": [{\"name\": \"identity\", \"description\": \"The verified identity.\"}, {\"name\": \"mail_from_domain\", \"description\": \"The custom MAIL FROM domain for the verified identity to use. The MAIL FROM domain must 1) be a subdomain of the verified identity, 2) not be used in a \\u00e2\\u0080\\u009cFrom\\u00e2\\u0080\\u009d address if the MAIL FROM domain is the destination of email feedback forwarding (for more information, see the Amazon SES Developer Guide ), and 3) not be used to receive emails. A value of null disables the custom MAIL FROM setting for the identity.\"}, {\"name\": \"behavior_on_mx_failure\", \"description\": \"The action for Amazon SES to take if it cannot successfully read the required MX record when you send an email. If you choose UseDefaultValue , Amazon SES uses amazonses.com (or a subdomain of that) as the MAIL FROM domain. If you choose RejectMessage , Amazon SES returns a MailFromDomainNotVerified error and not send the email.\\nThe action specified in BehaviorOnMXFailure is taken when the custom MAIL FROM domain setup is in the Pending , Failed , and TemporaryFailure states.\\nPossible values:\\n\\nUseDefaultValue\\nRejectMessage\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.ses.set_identity_mail_from_domain",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "identity",
+                        "description": "The verified identity."
+                    },
+                    {
+                        "name": "mail_from_domain",
+                        "description": "The custom MAIL FROM domain for the verified identity to use. The MAIL FROM domain must 1) be a subdomain of the verified identity, 2) not be used in a âFromâ address if the MAIL FROM domain is the destination of email feedback forwarding (for more information, see the Amazon SES Developer Guide ), and 3) not be used to receive emails. A value of null disables the custom MAIL FROM setting for the identity."
+                    },
+                    {
+                        "name": "behavior_on_mx_failure",
+                        "description": "The action for Amazon SES to take if it cannot successfully read the required MX record when you send an email. If you choose UseDefaultValue , Amazon SES uses amazonses.com (or a subdomain of that) as the MAIL FROM domain. If you choose RejectMessage , Amazon SES returns a MailFromDomainNotVerified error and not send the email.\nThe action specified in BehaviorOnMXFailure is taken when the custom MAIL FROM domain setup is in the Pending , Failed , and TemporaryFailure states.\nPossible values:\n\nUseDefaultValue\nRejectMessage"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Enables or disables the custom MAIL FROM domain setup for a verified identity (an email address or a domain).WarningTo send emails using the specified MAIL FROM domain, you must add an MX record to your MAIL FROM domainâs DNS settings. To ensure that your emails pass Sender Policy Framework (SPF) checks, you must also add or update an SPF record. For more information, see the Amazon SES Developer Guide .See also: AWS API Documentation\n"
+        },
+        {
+            "score": 0.33597683906555176,
+            "id": 1606,
+            "tool_id": "6a5396ca019e6dae0fb65d2de6b7c870fa47bcab6c337aca91630bb38fe48927",
+            "text": "RapidAPI::requests.get\nTripIt organizes travel plans into an itinerary that has all of your trip details in one place. Simply forward confirmation emails to plans@tripit.com and TripIt will automatically build an itinerary for your trip that you can access anytime, either online or from a mobile device. With the TripIt API, you can...\r\n\r\nAdd travel information to a TripIt account, enabling:\r\nInstant availability of clean, professional looking itineraries accessible on the web or via mobile device\r\nSeamless calendar integration via TripIt’s iCal feeds feature\r\nAccess to many third party productivity applications that use the TripIt API\r\n\r\nImport travel information from a TripIt traveler’s account, enabling:\r\nSeamless email import technology for your customers to add travel plans to your application\r\nInsight into a traveler’s entire trip (air, hotel, car, restaurants, meetings, etc.)\r\nOutputting travel data to social network applications such as Facebook and LinkedIn\nparams: {\"required\": [{\"name\": \"object_type\", \"description\": \"is one of the following strings:  air activity car cruise directions lodging map note points_program profile rail restaurant transport trip weather\", \"type\": \"STRING\"}, {\"name\": \"tripit_object_id\", \"description\": \"is the object ID of the TripIt object being requested.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "object_type",
+                        "description": "is one of the following strings:  air activity car cruise directions lodging map note points_program profile rail restaurant transport trip weather",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "tripit_object_id",
+                        "description": "is the object ID of the TripIt object being requested.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "TripIt organizes travel plans into an itinerary that has all of your trip details in one place. Simply forward confirmation emails to plans@tripit.com and TripIt will automatically build an itinerary for your trip that you can access anytime, either online or from a mobile device. With the TripIt API, you can...\r\n\r\nAdd travel information to a TripIt account, enabling:\r\nInstant availability of clean, professional looking itineraries accessible on the web or via mobile device\r\nSeamless calendar integration via TripIt’s iCal feeds feature\r\nAccess to many third party productivity applications that use the TripIt API\r\n\r\nImport travel information from a TripIt traveler’s account, enabling:\r\nSeamless email import technology for your customers to add travel plans to your application\r\nInsight into a traveler’s entire trip (air, hotel, car, restaurants, meetings, etc.)\r\nOutputting travel data to social network applications such as Facebook and LinkedIn"
+        },
+        {
+            "score": 0.326922208070755,
+            "id": 620,
+            "tool_id": "5a1c80fe983ba824ad76f0a773a9f2a92ddac4f411f7ca7d4d2dba7612553380",
+            "text": "aws::aws.pinpoint_email.put_account_sending_attributes\nEnable or disable the ability of your account to send email.\nparams: {\"required\": [{\"name\": \"sending_enabled_|_no_sending_enabled\", \"description\": \"Enables or disables your account\\u00e2\\u0080\\u0099s ability to send email. Set to true to enable email sending, or set to false to disable email sending.\\n\\nNoteIf AWS paused your account\\u00e2\\u0080\\u0099s ability to send email, you can\\u00e2\\u0080\\u0099t use this operation to resume your account\\u00e2\\u0080\\u0099s ability to send email.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.pinpoint_email.put_account_sending_attributes",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "sending_enabled_|_no_sending_enabled",
+                        "description": "Enables or disables your accountâs ability to send email. Set to true to enable email sending, or set to false to disable email sending.\n\nNoteIf AWS paused your accountâs ability to send email, you canât use this operation to resume your accountâs ability to send email."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Enable or disable the ability of your account to send email."
+        },
+        {
+            "score": 0.3044257164001465,
+            "id": 1621,
+            "tool_id": "2703208b28c9048292017f04c60872bedbed8080f3d90366e17d795347d7622d",
+            "text": "RapidAPI::requests.get\nImprove your mail deliverability rates and protect your IP reputation by using our Free Email Verification Service. Need further help? You can contact us at https://quickemailverification.com/contact-us\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"Enter email address to validate\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "Enter email address to validate",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Improve your mail deliverability rates and protect your IP reputation by using our Free Email Verification Service. Need further help? You can contact us at https://quickemailverification.com/contact-us"
+        },
+        {
+            "score": 0.30198344588279724,
+            "id": 2091,
+            "tool_id": "ff85ba68e019b97d48970e574187a651c1a783d9ad1fdd26e96f4b01c21745d1",
+            "text": "aws::aws.ses.set_active_receipt_rule_set\nSets the specified receipt rule set as the active receipt rule set.NoteTo disable your email-receiving through Amazon SES completely, you can call this operation with RuleSetName set to null.You can execute this operation no more than once per second.\nparams: {\"required\": [{\"name\": \"rule_set_name\", \"description\": \"The name of the receipt rule set to make active. Setting this value to null disables all email receiving.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.ses.set_active_receipt_rule_set",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "rule_set_name",
+                        "description": "The name of the receipt rule set to make active. Setting this value to null disables all email receiving."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Sets the specified receipt rule set as the active receipt rule set.NoteTo disable your email-receiving through Amazon SES completely, you can call this operation with RuleSetName set to null.You can execute this operation no more than once per second."
+        },
+        {
+            "score": 0.3017129600048065,
+            "id": 3299,
+            "tool_id": "803b6df9240590a4cc3128923979763273fa078cd4bc59cca1c2a23aa8b055af",
+            "text": "aws::aws.ses.update_configuration_set_tracking_options\nModifies an association between a configuration set and a custom domain for open and click event tracking.See also: AWS API Documentation\n\nparams: {\"required\": [{\"name\": \"configuration_set_name\", \"description\": \"The name of the configuration set.\"}, {\"name\": \"tracking_options\", \"description\": \"A domain that is used to redirect email recipients to an Amazon SES-operated domain. This domain captures open and click events generated by Amazon SES emails.\\nFor more information, see Configuring Custom Domains to Handle Open and Click Tracking in the Amazon SES Developer Guide .\\nCustomRedirectDomain -> (string)\\n\\nThe custom subdomain that is used to redirect email recipients to the Amazon SES event tracking domain.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.ses.update_configuration_set_tracking_options",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "configuration_set_name",
+                        "description": "The name of the configuration set."
+                    },
+                    {
+                        "name": "tracking_options",
+                        "description": "A domain that is used to redirect email recipients to an Amazon SES-operated domain. This domain captures open and click events generated by Amazon SES emails.\nFor more information, see Configuring Custom Domains to Handle Open and Click Tracking in the Amazon SES Developer Guide .\nCustomRedirectDomain -> (string)\n\nThe custom subdomain that is used to redirect email recipients to the Amazon SES event tracking domain."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Modifies an association between a configuration set and a custom domain for open and click event tracking.See also: AWS API Documentation\n"
+        },
+        {
+            "score": 0.29776716232299805,
+            "id": 941,
+            "tool_id": "b0980da3767eec5a0c9de9886a07b922feca188e247c2073ae0685268588d712",
+            "text": "RapidAPI::requests.get\nThis Email API is helpful to validate email addresses(single or bulk, using txt and csv), detect temporary, get fake emails, check free emails, check MX records and identify free/paid email service providers.\nparams: {\"required\": [], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [],
+                "optional": []
+            },
+            "description": "This Email API is helpful to validate email addresses(single or bulk, using txt and csv), detect temporary, get fake emails, check free emails, check MX records and identify free/paid email service providers."
+        },
+        {
+            "score": 0.29301005601882935,
+            "id": 2287,
+            "tool_id": "4a44463b6672a22c9b53d00e0f36b043b9e460f9372347d55d64a4987ad9425f",
+            "text": "aws::aws sesv2 put_configuration_set_suppression_options\nSpecify the account suppression list preferences for a configuration set.\nparams: {\"required\": [{\"name\": \"configuration_set_name\", \"description\": \"The name of the configuration set to change the suppression list preferences for.\"}, {\"name\": \"suppressed_reasons\", \"description\": \"A list that contains the reasons that email addresses are automatically added to the suppression list for your account. This list can contain any or all of the following:\\n\\nCOMPLAINT \\u00e2\\u0080\\u0093 Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a complaint.\\nBOUNCE \\u00e2\\u0080\\u0093 Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a hard bounce.\\n\\n(string)\\n\\nThe reason that the address was added to the suppression list for your account. The value can be one of the following:\\n\\nCOMPLAINT \\u00e2\\u0080\\u0093 Amazon SES added an email address to the suppression list for your account because a message sent to that address results in a complaint.\\nBOUNCE \\u00e2\\u0080\\u0093 Amazon SES added an email address to the suppression list for your account because a message sent to that address results in a hard bounce.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws sesv2 put_configuration_set_suppression_options",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "configuration_set_name",
+                        "description": "The name of the configuration set to change the suppression list preferences for."
+                    },
+                    {
+                        "name": "suppressed_reasons",
+                        "description": "A list that contains the reasons that email addresses are automatically added to the suppression list for your account. This list can contain any or all of the following:\n\nCOMPLAINT â Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a complaint.\nBOUNCE â Amazon SES adds an email address to the suppression list for your account when a message sent to that address results in a hard bounce.\n\n(string)\n\nThe reason that the address was added to the suppression list for your account. The value can be one of the following:\n\nCOMPLAINT â Amazon SES added an email address to the suppression list for your account because a message sent to that address results in a complaint.\nBOUNCE â Amazon SES added an email address to the suppression list for your account because a message sent to that address results in a hard bounce."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Specify the account suppression list preferences for a configuration set."
+        },
+        {
+            "score": 0.291557639837265,
+            "id": 2884,
+            "tool_id": "b00189431a0ecdb666858d3ceaddda800b7895eee70d3c8f0e4bd95501cde068",
+            "text": "aws::aws.workmail.cancel_mailbox_export_job\nCancels a mailbox export job.NoteIf the mailbox export job is near completion, it might not be possible to cancel it.\nparams: {\"required\": [{\"name\": \"client_token\", \"description\": \"The idempotency token for the client request.\"}, {\"name\": \"job_id\", \"description\": \"The job ID.\"}, {\"name\": \"organization_id\", \"description\": \"The organization ID.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.workmail.cancel_mailbox_export_job",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "client_token",
+                        "description": "The idempotency token for the client request."
+                    },
+                    {
+                        "name": "job_id",
+                        "description": "The job ID."
+                    },
+                    {
+                        "name": "organization_id",
+                        "description": "The organization ID."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Cancels a mailbox export job.NoteIf the mailbox export job is near completion, it might not be possible to cancel it."
+        },
+        {
+            "score": 0.2877746820449829,
+            "id": 791,
+            "tool_id": "706c06e3bd2d10a0e4876cd698dbc855e5963b007a42423a0d24dc6bb5d6e8b1",
+            "text": "aws::aws.pinpoint.update_email_channel\nEnables the email channel for an application or updates the status and settings of the email channel for an application.\nparams: {\"required\": [{\"name\": \"application_id\", \"description\": \"The unique identifier for the application. This identifier is displayed as the Project ID on the Amazon Pinpoint console.\"}, {\"name\": \"email_channel_request\", \"description\": \"Specifies the status and settings of the email channel for an application.\\nConfigurationSet -> (string)\\n\\nThe Amazon SES configuration set that you want to apply to messages that you send through the channel.\\nEnabled -> (boolean)\\n\\nSpecifies whether to enable the email channel for the application.\\nFromAddress -> (string)\\n\\nThe verified email address that you want to send email from when you send email through the channel.\\nIdentity -> (string)\\n\\nThe Amazon Resource Name (ARN) of the identity, verified with Amazon Simple Email Service (Amazon SES), that you want to use when you send email through the channel.\\nRoleArn -> (string)\\n\\nThe ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to use when it submits email-related event data for the channel.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.pinpoint.update_email_channel",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "application_id",
+                        "description": "The unique identifier for the application. This identifier is displayed as the Project ID on the Amazon Pinpoint console."
+                    },
+                    {
+                        "name": "email_channel_request",
+                        "description": "Specifies the status and settings of the email channel for an application.\nConfigurationSet -> (string)\n\nThe Amazon SES configuration set that you want to apply to messages that you send through the channel.\nEnabled -> (boolean)\n\nSpecifies whether to enable the email channel for the application.\nFromAddress -> (string)\n\nThe verified email address that you want to send email from when you send email through the channel.\nIdentity -> (string)\n\nThe Amazon Resource Name (ARN) of the identity, verified with Amazon Simple Email Service (Amazon SES), that you want to use when you send email through the channel.\nRoleArn -> (string)\n\nThe ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to use when it submits email-related event data for the channel."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Enables the email channel for an application or updates the status and settings of the email channel for an application."
+        },
+        {
+            "score": 0.2851238548755646,
+            "id": 2359,
+            "tool_id": "d5d26a8f4f3f59202ee7e4de30e60c718b28586149ee7cc41a0b1487ee811f1e",
+            "text": "RapidAPI::requests.get\n“Validate Email” before you send. Discover deliverability of email addresses by our most popular email verification API.\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "“Validate Email” before you send. Discover deliverability of email addresses by our most popular email verification API."
+        },
+        {
+            "score": 0.28230735659599304,
+            "id": 2111,
+            "tool_id": "97b969c8b8dd6c66c82abbdd71c32f2ac49d3a2e456578e5a34ff5ddbe909d30",
+            "text": "RapidAPI::requests.get\nA simple API to verify email addresses in making sure they are valid and real, for ensuring you are sending emails to actual people!\nparams: {\"required\": [{\"name\": \"email\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "email",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "A simple API to verify email addresses in making sure they are valid and real, for ensuring you are sending emails to actual people!"
+        },
+        {
+            "score": 0.2815672755241394,
+            "id": 2320,
+            "tool_id": "829bf0bcd40cda383cdf492de376a5285e5577ef60689611f868704972c5d653",
+            "text": "aws::aws.route53domains.check_domain_transferability\nChecks whether a domain name can be transferred to Amazon Route 53.\nparams: {\"required\": [{\"name\": \"domain_name\", \"description\": \"The name of the domain that you want to transfer to Route 53. The top-level domain (TLD), such as .com, must be a TLD that Route 53 supports. For a list of supported TLDs, see Domains that You Can Register with Amazon Route 53 in the Amazon Route 53 Developer Guide .\\nThe domain name can contain only the following characters:\\n\\nLetters a through z. Domain names are not case sensitive.\\nNumbers 0 through 9.\\nHyphen (-). You can\\u00e2\\u0080\\u0099t specify a hyphen at the beginning or end of a label.\\nPeriod (.) to separate the labels in the name, such as the . in example.com .\"}, {\"name\": \"auth_code\", \"description\": \"If the registrar for the top-level domain (TLD) requires an authorization code to transfer the domain, the code that you got from the current registrar for the domain.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.route53domains.check_domain_transferability",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "domain_name",
+                        "description": "The name of the domain that you want to transfer to Route 53. The top-level domain (TLD), such as .com, must be a TLD that Route 53 supports. For a list of supported TLDs, see Domains that You Can Register with Amazon Route 53 in the Amazon Route 53 Developer Guide .\nThe domain name can contain only the following characters:\n\nLetters a through z. Domain names are not case sensitive.\nNumbers 0 through 9.\nHyphen (-). You canât specify a hyphen at the beginning or end of a label.\nPeriod (.) to separate the labels in the name, such as the . in example.com ."
+                    },
+                    {
+                        "name": "auth_code",
+                        "description": "If the registrar for the top-level domain (TLD) requires an authorization code to transfer the domain, the code that you got from the current registrar for the domain."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Checks whether a domain name can be transferred to Amazon Route 53."
+        }
+    ]
+}
+{
+    "query": "Ops + scheduling context: We already created the storage bucket. Now schedule a postmortem meeting for tomorrow at 10am PST with the oncall and SRE leads. Return only the meeting creation call.",
+    "expected": {
+        "name": "Scheduler",
+        "api_name": "calendar.create_event",
+        "description": "Create a calendar event",
+        "parameters": {
+            "required": [
+                {
+                    "name": "title"
+                },
+                {
+                    "name": "start_time"
+                },
+                {
+                    "name": "end_time"
+                }
+            ],
+            "optional": [
+                {
+                    "name": "attendees"
+                }
+            ]
+        }
+    },
+    "topk": [
+        {
+            "score": 0.42053163051605225,
+            "id": 2170,
+            "tool_id": "5a13393edab59d2ebe2652ea295b50b92aef97838050d0f4bc66f1eef6889e45",
+            "text": "alpha compute::gcloud.alpha.compute.future_reservations.create\nCreate a Compute Engine future reservation\nparams: {\"required\": [{\"name\": \"future_reservation\"}, {\"name\": \"total_count\"}, {\"name\": \"source_instance_template\"}, {\"name\": \"machine_type\"}, {\"name\": \"accelerator\"}, {\"name\": \"local_ssd\"}, {\"name\": \"maintenance_freeze_duration\"}, {\"name\": \"maintenance_interval\"}, {\"name\": \"min_cpu_platform\"}, {\"name\": \"start_time\"}, {\"name\": \"duration\"}, {\"name\": \"end_time\"}, {\"name\": \"description\"}, {\"name\": \"name_prefix\"}, {\"name\": \"planning_status\"}, {\"name\": \"zone\"}, {\"name\": \"share_setting\"}, {\"name\": \"share_with\"}], \"optional\": []}",
+            "name": "alpha compute",
+            "api_name": "gcloud.alpha.compute.future_reservations.create",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "future_reservation"
+                    },
+                    {
+                        "name": "total_count"
+                    },
+                    {
+                        "name": "source_instance_template"
+                    },
+                    {
+                        "name": "machine_type"
+                    },
+                    {
+                        "name": "accelerator"
+                    },
+                    {
+                        "name": "local_ssd"
+                    },
+                    {
+                        "name": "maintenance_freeze_duration"
+                    },
+                    {
+                        "name": "maintenance_interval"
+                    },
+                    {
+                        "name": "min_cpu_platform"
+                    },
+                    {
+                        "name": "start_time"
+                    },
+                    {
+                        "name": "duration"
+                    },
+                    {
+                        "name": "end_time"
+                    },
+                    {
+                        "name": "description"
+                    },
+                    {
+                        "name": "name_prefix"
+                    },
+                    {
+                        "name": "planning_status"
+                    },
+                    {
+                        "name": "zone"
+                    },
+                    {
+                        "name": "share_setting"
+                    },
+                    {
+                        "name": "share_with"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Create a Compute Engine future reservation"
+        },
+        {
+            "score": 0.3949812948703766,
+            "id": 3236,
+            "tool_id": "4e334b39dce22d28fd9f6b7bf6488fd822b70a843a67ed5b6572a086d48f3db1",
+            "text": "az::Event Hubs Cluster Create\nCreate an instance of an Event Hubs Cluster\nparams: {\"required\": [{\"name\": \"cluster-name\", \"description\": \"The name of the Event Hubs Cluster.\", \"required\": true}, {\"name\": \"resource-group\", \"description\": \"Name of resource group.\", \"required\": true}, {\"name\": \"capacity\", \"description\": \"The quantity of Event Hubs Cluster Capacity Units contained in this cluster.\", \"required\": false}, {\"name\": \"location\", \"description\": \"Resource location.\", \"required\": false}, {\"name\": \"no-wait\", \"description\": \"Do not wait for the long-running operation to finish.\", \"required\": false}, {\"name\": \"provisioning-state\", \"description\": \"Provisioning state of the Cluster.\", \"required\": false}, {\"name\": \"sku\", \"description\": \"Name of this SKU.\", \"required\": false}, {\"name\": \"supports-scaling\", \"description\": \"A value that indicates whether Scaling is Supported.\", \"required\": false}, {\"name\": \"tags\", \"description\": \"Resource tags.\", \"required\": false}], \"optional\": []}",
+            "name": "az",
+            "api_name": "Event Hubs Cluster Create",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "cluster-name",
+                        "description": "The name of the Event Hubs Cluster.",
+                        "required": true
+                    },
+                    {
+                        "name": "resource-group",
+                        "description": "Name of resource group.",
+                        "required": true
+                    },
+                    {
+                        "name": "capacity",
+                        "description": "The quantity of Event Hubs Cluster Capacity Units contained in this cluster.",
+                        "required": false
+                    },
+                    {
+                        "name": "location",
+                        "description": "Resource location.",
+                        "required": false
+                    },
+                    {
+                        "name": "no-wait",
+                        "description": "Do not wait for the long-running operation to finish.",
+                        "required": false
+                    },
+                    {
+                        "name": "provisioning-state",
+                        "description": "Provisioning state of the Cluster.",
+                        "required": false
+                    },
+                    {
+                        "name": "sku",
+                        "description": "Name of this SKU.",
+                        "required": false
+                    },
+                    {
+                        "name": "supports-scaling",
+                        "description": "A value that indicates whether Scaling is Supported.",
+                        "required": false
+                    },
+                    {
+                        "name": "tags",
+                        "description": "Resource tags.",
+                        "required": false
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Create an instance of an Event Hubs Cluster"
+        },
+        {
+            "score": 0.3850637674331665,
+            "id": 745,
+            "tool_id": "ee83e4232d328fbbcfedd824497e572bf1ff039b8a52c7da2240b47abb48e73b",
+            "text": "az::automation schedule create\nCreate automation schedule\nparams: {\"required\": [{\"name\": \"automation-account-name\", \"description\": \"The name of the automation account.\"}, {\"name\": \"frequency\", \"description\": \"The frequency of the schedule.\"}, {\"name\": \"interval\", \"description\": \"The interval of the schedule.\"}, {\"name\": \"name\", \"description\": \"The schedule name.\"}, {\"name\": \"resource-group\", \"description\": \"Name of resource group.\"}, {\"name\": \"description\", \"description\": \"The description of the schedule.\"}, {\"name\": \"expiry-time\", \"description\": \"The end time of the schedule.\"}, {\"name\": \"start-time\", \"description\": \"The start time of the schedule.\"}, {\"name\": \"time-zone\", \"description\": \"The time zone of the schedule.\"}], \"optional\": []}",
+            "name": "az",
+            "api_name": "automation schedule create",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "automation-account-name",
+                        "description": "The name of the automation account."
+                    },
+                    {
+                        "name": "frequency",
+                        "description": "The frequency of the schedule."
+                    },
+                    {
+                        "name": "interval",
+                        "description": "The interval of the schedule."
+                    },
+                    {
+                        "name": "name",
+                        "description": "The schedule name."
+                    },
+                    {
+                        "name": "resource-group",
+                        "description": "Name of resource group."
+                    },
+                    {
+                        "name": "description",
+                        "description": "The description of the schedule."
+                    },
+                    {
+                        "name": "expiry-time",
+                        "description": "The end time of the schedule."
+                    },
+                    {
+                        "name": "start-time",
+                        "description": "The start time of the schedule."
+                    },
+                    {
+                        "name": "time-zone",
+                        "description": "The time zone of the schedule."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Create automation schedule"
+        },
+        {
+            "score": 0.3841521143913269,
+            "id": 1109,
+            "tool_id": "7116887eb09630b87cb124c768bf5ad7a000b8767fd8e7ec189a451edb18835a",
+            "text": "aws::aws.timestreamquery.deletescheduledquery\nDeletes a given scheduled query. This is an irreversible operation.\nparams: {\"required\": [{\"name\": \"scheduled_query_arn\", \"description\": \"The ARN of the scheduled query.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.timestreamquery.deletescheduledquery",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "scheduled_query_arn",
+                        "description": "The ARN of the scheduled query."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Deletes a given scheduled query. This is an irreversible operation."
+        },
+        {
+            "score": 0.3788573145866394,
+            "id": 2097,
+            "tool_id": "b40598caa9b29284135e86a00ec59b651c4b5aab070d8d9a7b5fce6c7ceab2a1",
+            "text": "RapidAPI::requests.get\nThe SuperSaaS API provides calendar services that can be used to add online booking and scheduling functionality to an existing website or CRM software.\nparams: {\"required\": [{\"name\": \"id\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "id",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "The SuperSaaS API provides calendar services that can be used to add online booking and scheduling functionality to an existing website or CRM software."
+        },
+        {
+            "score": 0.3786166310310364,
+            "id": 2752,
+            "tool_id": "04d3261806820c55653cd7d5e59a204510e83318392b2ec275dd8a35739549d6",
+            "text": "az::AKS Nodepool Snapshot Delete\nDelete a nodepool snapshot\nparams: {\"required\": [{\"name\": \"name -n\", \"description\": \"The nodepool snapshot name.\", \"is_required\": true}, {\"name\": \"resource-group -g\", \"description\": \"Name of resource group. You can configure the default group using az configure --defaults group=<name>.\", \"is_required\": true}, {\"name\": \"no-wait\", \"description\": \"Do not wait for the long-running operation to finish.\", \"default_value\": \"False\", \"is_required\": false}, {\"name\": \"yes -y\", \"description\": \"Do not prompt for confirmation.\", \"default_value\": \"False\", \"is_required\": false}], \"optional\": []}",
+            "name": "az",
+            "api_name": "AKS Nodepool Snapshot Delete",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "name -n",
+                        "description": "The nodepool snapshot name.",
+                        "is_required": true
+                    },
+                    {
+                        "name": "resource-group -g",
+                        "description": "Name of resource group. You can configure the default group using az configure --defaults group=<name>.",
+                        "is_required": true
+                    },
+                    {
+                        "name": "no-wait",
+                        "description": "Do not wait for the long-running operation to finish.",
+                        "default_value": "False",
+                        "is_required": false
+                    },
+                    {
+                        "name": "yes -y",
+                        "description": "Do not prompt for confirmation.",
+                        "default_value": "False",
+                        "is_required": false
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Delete a nodepool snapshot"
+        },
+        {
+            "score": 0.3760559558868408,
+            "id": 2172,
+            "tool_id": "e753e16e63e00b05b08d758ee049d6e4fd1a8782c287b73ea9b412e5dbf91b9c",
+            "text": "gcloud::gcloud.alpha.compute.future_reservations().cancel\nCancel a Compute Engine future reservation\nparams: {\"required\": [{\"name\": \"future_reservation\", \"description\": \"ID of the future reservation or fully qualified identifier for the future reservation.\"}, {\"name\": \"zone\", \"description\": \"The name of the Google Compute Engine zone.\"}], \"optional\": []}",
+            "name": "gcloud",
+            "api_name": "gcloud.alpha.compute.future_reservations().cancel",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "future_reservation",
+                        "description": "ID of the future reservation or fully qualified identifier for the future reservation."
+                    },
+                    {
+                        "name": "zone",
+                        "description": "The name of the Google Compute Engine zone."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Cancel a Compute Engine future reservation"
+        },
+        {
+            "score": 0.3688231408596039,
+            "id": 1264,
+            "tool_id": "58f0626f95071e7ce18cfcae9eed1ca810f069f0668c3b6b231032e75b9b1645",
+            "text": "aws::aws.timestream_query.describe_scheduled_query\nProvides detailed information about a scheduled query.\nparams: {\"required\": [{\"name\": \"scheduled_query_arn\", \"description\": \"The ARN of the scheduled query.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.timestream_query.describe_scheduled_query",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "scheduled_query_arn",
+                        "description": "The ARN of the scheduled query."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Provides detailed information about a scheduled query."
+        },
+        {
+            "score": 0.36827200651168823,
+            "id": 1912,
+            "tool_id": "0174197927c0ad4c56729a2ee4c96570811c5b6d22af595a0a76aee2aeeb432c",
+            "text": "gcloud::gcloud.alpha.compute.future_reservations().update\nUpdate Compute Engine future reservations\nparams: {\"required\": [{\"name\": \"future_reservation\"}, {\"name\": \"planning_status\"}, {\"name\": \"total_count\"}, {\"name\": \"zone\"}, {\"name\": \"accelerator\"}, {\"name\": \"local_ssd\"}, {\"name\": \"machine_type\"}, {\"name\": \"maintenance_interval\"}, {\"name\": \"min_cpu_platform\"}, {\"name\": \"clear_share_settings\"}, {\"name\": \"share_setting\"}, {\"name\": \"share_with\"}, {\"name\": \"start_time\"}, {\"name\": \"duration\"}, {\"name\": \"end_time\"}], \"optional\": []}",
+            "name": "gcloud",
+            "api_name": "gcloud.alpha.compute.future_reservations().update",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "future_reservation"
+                    },
+                    {
+                        "name": "planning_status"
+                    },
+                    {
+                        "name": "total_count"
+                    },
+                    {
+                        "name": "zone"
+                    },
+                    {
+                        "name": "accelerator"
+                    },
+                    {
+                        "name": "local_ssd"
+                    },
+                    {
+                        "name": "machine_type"
+                    },
+                    {
+                        "name": "maintenance_interval"
+                    },
+                    {
+                        "name": "min_cpu_platform"
+                    },
+                    {
+                        "name": "clear_share_settings"
+                    },
+                    {
+                        "name": "share_setting"
+                    },
+                    {
+                        "name": "share_with"
+                    },
+                    {
+                        "name": "start_time"
+                    },
+                    {
+                        "name": "duration"
+                    },
+                    {
+                        "name": "end_time"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Update Compute Engine future reservations"
+        },
+        {
+            "score": 0.3671809732913971,
+            "id": 2719,
+            "tool_id": "443762790705d13ab084721df073cffeae81c955f2c95b2cdbcbbb3eb31663bc",
+            "text": "aws::aws.glue.start_crawler_schedule\nChanges the schedule state of the specified crawler to SCHEDULED , unless the crawler is already running or the schedule state is already SCHEDULED .\nparams: {\"required\": [{\"name\": \"crawler_name\", \"description\": \"Name of the crawler to schedule.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.glue.start_crawler_schedule",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "crawler_name",
+                        "description": "Name of the crawler to schedule."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Changes the schedule state of the specified crawler to SCHEDULED , unless the crawler is already running or the schedule state is already SCHEDULED ."
+        },
+        {
+            "score": 0.36663395166397095,
+            "id": 2813,
+            "tool_id": "a9c05882e13817186c5f7c24e84745a871afe7f445fb960e375d5b3f775e5f84",
+            "text": "aws::aws.ec2.modify_instance_event_start_time\nModifies the start time for a scheduled Amazon EC2 instance event.\nparams: {\"required\": [{\"name\": \"dry_run_|_no_dry_run\", \"description\": \"Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation . Otherwise, it is UnauthorizedOperation .\"}, {\"name\": \"instance_id\", \"description\": \"The ID of the instance with the scheduled event.\"}, {\"name\": \"instance_event_id\", \"description\": \"The ID of the event whose date and time you are modifying.\"}, {\"name\": \"not_before\", \"description\": \"The new date and time when the event will take place.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.ec2.modify_instance_event_start_time",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "dry_run_|_no_dry_run",
+                        "description": "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation . Otherwise, it is UnauthorizedOperation ."
+                    },
+                    {
+                        "name": "instance_id",
+                        "description": "The ID of the instance with the scheduled event."
+                    },
+                    {
+                        "name": "instance_event_id",
+                        "description": "The ID of the event whose date and time you are modifying."
+                    },
+                    {
+                        "name": "not_before",
+                        "description": "The new date and time when the event will take place."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Modifies the start time for a scheduled Amazon EC2 instance event."
+        },
+        {
+            "score": 0.3660895526409149,
+            "id": 636,
+            "tool_id": "e067ed7e5032e84bb91a418487ed3a47c930297e0c305161804adb9d897a8326",
+            "text": "gcloud::gcloud.alpha.compute.future_reservations().delete\nDelete a Compute Engine future reservation\nparams: {\"required\": [{\"name\": \"future_reservation\", \"description\": \"ID of the future reservation or fully qualified identifier for the future reservation.\"}, {\"name\": \"zone\", \"description\": \"The name of the Google Compute Engine zone.\"}], \"optional\": []}",
+            "name": "gcloud",
+            "api_name": "gcloud.alpha.compute.future_reservations().delete",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "future_reservation",
+                        "description": "ID of the future reservation or fully qualified identifier for the future reservation."
+                    },
+                    {
+                        "name": "zone",
+                        "description": "The name of the Google Compute Engine zone."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Delete a Compute Engine future reservation"
+        },
+        {
+            "score": 0.36604243516921997,
+            "id": 1528,
+            "tool_id": "516397521ae630eee1f7f343ceae27284fc2693d72aae8d72a984c9637c18931",
+            "text": "alpha artifacts docker::gcloud.alpha.artifacts.docker.images().delete(IMAGE='us_west1_docker.pkg.dev/my_project/my_repository/busy_box'\nDelete an Artifact Registry container image\nparams: {\"required\": [{\"name\": \"image\", \"description\": \"A container image. A valid container image has the format of LOCATION-docker.pkg.dev/PROJECT-ID/REPOSITORY-ID/IMAGE\"}, {\"name\": \"async\", \"description\": \"Return immediately, without waiting for the operation in progress to complete.\"}, {\"name\": \"delete_tags\", \"description\": \"If specified, all tags associated with the image are deleted.\"}], \"optional\": []}",
+            "name": "alpha artifacts docker",
+            "api_name": "gcloud.alpha.artifacts.docker.images().delete(IMAGE='us_west1_docker.pkg.dev/my_project/my_repository/busy_box'",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "image",
+                        "description": "A container image. A valid container image has the format of LOCATION-docker.pkg.dev/PROJECT-ID/REPOSITORY-ID/IMAGE"
+                    },
+                    {
+                        "name": "async",
+                        "description": "Return immediately, without waiting for the operation in progress to complete."
+                    },
+                    {
+                        "name": "delete_tags",
+                        "description": "If specified, all tags associated with the image are deleted."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Delete an Artifact Registry container image"
+        },
+        {
+            "score": 0.36505579948425293,
+            "id": 3199,
+            "tool_id": "f71f7d806e9912f1e38b1ac2d15e87d8b3a6af0149f38a5f68d6cbcab1af279c",
+            "text": "az::Automation Schedule Delete\nDelete an automation schedule\nparams: {\"required\": [{\"name\": \"automation-account-name\", \"description\": \"The name of the automation account.\", \"type\": \"string\", \"required\": true}, {\"name\": \"name / --schedule-name / -n\", \"description\": \"The schedule name.\", \"type\": \"string\", \"required\": true}, {\"name\": \"resource-group / -g\", \"description\": \"Name of resource group. You can configure the default group using az configure --defaults group=<name>.\", \"type\": \"string\", \"required\": true}, {\"name\": \"yes / -y\", \"description\": \"Do not prompt for confirmation.\", \"type\": \"boolean\", \"default\": \"False\", \"required\": false}], \"optional\": []}",
+            "name": "az",
+            "api_name": "Automation Schedule Delete",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "automation-account-name",
+                        "description": "The name of the automation account.",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "name / --schedule-name / -n",
+                        "description": "The schedule name.",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "resource-group / -g",
+                        "description": "Name of resource group. You can configure the default group using az configure --defaults group=<name>.",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "yes / -y",
+                        "description": "Do not prompt for confirmation.",
+                        "type": "boolean",
+                        "default": "False",
+                        "required": false
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Delete an automation schedule"
+        }
+    ]
+}
+{
+    "query": "Finance + logging context: After moving telemetry to cold storage, transfer 100 USD from account 123 to 456 and add a ledger note. Output only the funds transfer call.",
+    "expected": {
+        "name": "Payments",
+        "api_name": "payments.transfer",
+        "description": "Transfer funds between accounts",
+        "parameters": {
+            "required": [
+                {
+                    "name": "from_account"
+                },
+                {
+                    "name": "to_account"
+                },
+                {
+                    "name": "amount"
+                }
+            ],
+            "optional": [
+                {
+                    "name": "note"
+                }
+            ]
+        }
+    },
+    "topk": [
+        {
+            "score": 0.3595125079154968,
+            "id": 2657,
+            "tool_id": "3823a9305ca292779cb1a12e7c024988eb5ac5c47f5974a48f84df51ed8b261f",
+            "text": "RapidAPI::requests.get\nIntroducing ForexGo API - the powerful currency exchange solution for developers. Effortlessly integrate real-time forex rates and conversion capabilities into your applications with our easy-to-use API. Enhance your projects with accurate and up-to-date exchange data, empowering users across the globe to make informed financial decisions. Get started with ForexGo API today!\nparams: {\"required\": [{\"name\": \"amount\", \"description\": \"Defines the value of the amount.\", \"type\": \"NUMBER\"}, {\"name\": \"from\", \"description\": \"Supported currencies are listed below.\\n\\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR\", \"type\": \"STRING\"}, {\"name\": \"to\", \"description\": \"Supported currencies are listed below.\\n\\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR\", \"type\": \"STRING\"}, {\"name\": \"date\", \"description\": \"ISO Date format:\\n\\nYYYY-MM-DDTHH:mm:ss.sssZ\\n\\nPull data from requested date.\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "amount",
+                        "description": "Defines the value of the amount.",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "from",
+                        "description": "Supported currencies are listed below.\n\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "to",
+                        "description": "Supported currencies are listed below.\n\nEUR, USD, JPY, BGN, CZK, DKK, GBP, HUF, PLN, RON, SEK, CHF, ISK, NOK, TRY, AUD, BRL, CAD, CNY, HKD, IDR, ILS, INR, KRW, MXN, MYR, NZD, PHP, SGD, THB, ZAR",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "date",
+                        "description": "ISO Date format:\n\nYYYY-MM-DDTHH:mm:ss.sssZ\n\nPull data from requested date.",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Introducing ForexGo API - the powerful currency exchange solution for developers. Effortlessly integrate real-time forex rates and conversion capabilities into your applications with our easy-to-use API. Enhance your projects with accurate and up-to-date exchange data, empowering users across the globe to make informed financial decisions. Get started with ForexGo API today!"
+        },
+        {
+            "score": 0.3569704294204712,
+            "id": 2132,
+            "tool_id": "e261cdfd0f51a7ac85a323365365572ac5c80c9610f6b6a48453147702208742",
+            "text": "aws::aws.billingconductor.update_custom_line_item\nUpdate an existing custom line item in the current or previous billing period.\nparams: {\"required\": [{\"name\": \"arn\", \"description\": \"The ARN of the custom line item to be updated.\"}, {\"name\": \"name\", \"description\": \"The new name for the custom line item.\"}, {\"name\": \"description\", \"description\": \"The new line item description of the custom line item.\"}, {\"name\": \"charge_details\", \"description\": \"A ListCustomLineItemChargeDetails containing the new charge details for the custom line item.\\nFlat -> (structure)\\n\\nAn UpdateCustomLineItemFlatChargeDetails that describes the new charge details of a flat custom line item.\\nChargeValue -> (double)\\n\\nThe custom line item\\u00e2\\u0080\\u0099s new fixed charge value in USD.\\n\\nPercentage -> (structure)\\n\\nAn UpdateCustomLineItemPercentageChargeDetails that describes the new charge details of a percentage custom line item.\\nPercentageValue -> (double)\\n\\nThe custom line item\\u00e2\\u0080\\u0099s new percentage value. This will be multiplied against the combined value of its associated resources to determine its charge value.\\n\\nLineItemFilters -> (list)\\n\\nA representation of the line item filter.\\n(structure)\\n\\nA representation of the line item filter for your custom line item. You can use line item filters to include or exclude specific resource values from the billing group\\u00e2\\u0080\\u0099s total cost. For example, if you create a custom line item and you want to filter out a value, such as Savings Plan discounts, you can update LineItemFilter to exclude it.\\nAttribute -> (string)\\n\\nThe attribute of the line item filter. This specifies what attribute that you can filter on.\\nMatchOption -> (string)\\n\\nThe match criteria of the line item filter. This parameter specifies whether not to include the resource value from the billing group total cost.\\nValues -> (list)\\n\\nThe values of the line item filter. This specifies the values to filter on. Currently, you can only exclude Savings Plan discounts.\\n(string)\"}, {\"name\": \"billing_period_range\", \"description\": \"The billing period range in which the custom line item request will be applied.\\nInclusiveStartBillingPeriod -> (string)\\n\\nThe inclusive start billing period that defines a billing period range where a custom line is applied.\\nExclusiveEndBillingPeriod -> (string)\\n\\nThe inclusive end billing period that defines a billing period range where a custom line is applied.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.billingconductor.update_custom_line_item",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "arn",
+                        "description": "The ARN of the custom line item to be updated."
+                    },
+                    {
+                        "name": "name",
+                        "description": "The new name for the custom line item."
+                    },
+                    {
+                        "name": "description",
+                        "description": "The new line item description of the custom line item."
+                    },
+                    {
+                        "name": "charge_details",
+                        "description": "A ListCustomLineItemChargeDetails containing the new charge details for the custom line item.\nFlat -> (structure)\n\nAn UpdateCustomLineItemFlatChargeDetails that describes the new charge details of a flat custom line item.\nChargeValue -> (double)\n\nThe custom line itemâs new fixed charge value in USD.\n\nPercentage -> (structure)\n\nAn UpdateCustomLineItemPercentageChargeDetails that describes the new charge details of a percentage custom line item.\nPercentageValue -> (double)\n\nThe custom line itemâs new percentage value. This will be multiplied against the combined value of its associated resources to determine its charge value.\n\nLineItemFilters -> (list)\n\nA representation of the line item filter.\n(structure)\n\nA representation of the line item filter for your custom line item. You can use line item filters to include or exclude specific resource values from the billing groupâs total cost. For example, if you create a custom line item and you want to filter out a value, such as Savings Plan discounts, you can update LineItemFilter to exclude it.\nAttribute -> (string)\n\nThe attribute of the line item filter. This specifies what attribute that you can filter on.\nMatchOption -> (string)\n\nThe match criteria of the line item filter. This parameter specifies whether not to include the resource value from the billing group total cost.\nValues -> (list)\n\nThe values of the line item filter. This specifies the values to filter on. Currently, you can only exclude Savings Plan discounts.\n(string)"
+                    },
+                    {
+                        "name": "billing_period_range",
+                        "description": "The billing period range in which the custom line item request will be applied.\nInclusiveStartBillingPeriod -> (string)\n\nThe inclusive start billing period that defines a billing period range where a custom line is applied.\nExclusiveEndBillingPeriod -> (string)\n\nThe inclusive end billing period that defines a billing period range where a custom line is applied."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Update an existing custom line item in the current or previous billing period."
+        },
+        {
+            "score": 0.32335206866264343,
+            "id": 2344,
+            "tool_id": "47b4b94d61ae8c41046d693a62325f1d6a33edf927781483568e19951d5953c8",
+            "text": "aws::aws.chime.update_global_settings\nUpdates global settings for the administratorâs AWS account, such as Amazon Chime Business Calling and Amazon Chime Voice Connector settings.\nparams: {\"required\": [{\"name\": \"business_calling\", \"description\": \"The Amazon Chime Business Calling settings.\\nCdrBucket -> (string)\\n\\nThe Amazon S3 bucket designated for call detail record storage.\"}, {\"name\": \"voice_connector\", \"description\": \"The Amazon Chime Voice Connector settings.\\nCdrBucket -> (string)\\n\\nThe Amazon S3 bucket designated for call detail record storage.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.chime.update_global_settings",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "business_calling",
+                        "description": "The Amazon Chime Business Calling settings.\nCdrBucket -> (string)\n\nThe Amazon S3 bucket designated for call detail record storage."
+                    },
+                    {
+                        "name": "voice_connector",
+                        "description": "The Amazon Chime Voice Connector settings.\nCdrBucket -> (string)\n\nThe Amazon S3 bucket designated for call detail record storage."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Updates global settings for the administratorâs AWS account, such as Amazon Chime Business Calling and Amazon Chime Voice Connector settings."
+        },
+        {
+            "score": 0.3223106563091278,
+            "id": 27,
+            "tool_id": "3bd66b6d15f8a5f1da35b2d3846a9df48549451f95643a23305ede02776dfa97",
+            "text": "RapidAPI::requests.get\nThe bank statement API helps banks and lenders make decisions b providing outputs about Salary frequency and estimation, current financial health of the individual, any risky behaviour associated with the transactions.\nparams: {\"required\": [{\"name\": \"request_id\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "request_id",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "The bank statement API helps banks and lenders make decisions b providing outputs about Salary frequency and estimation, current financial health of the individual, any risky behaviour associated with the transactions."
+        },
+        {
+            "score": 0.32124394178390503,
+            "id": 2999,
+            "tool_id": "c145d90a1360cb96bcd3fb75a00aafb65f69566f78adb6f93af142d683bab12c",
+            "text": "aws::aws.storagegateway.describe_working_storage\nReturns information about the working storage of a gateway. This operation is only supported in the stored volumes gateway type. This operation is deprecated in cached volumes API version (20120630). Use DescribeUploadBuffer instead.NoteWorking storage is also referred to as upload buffer. You can also use the DescribeUploadBuffer operation to add upload buffer to a stored volume gateway.See also: AWS API Documentation\n\nparams: {\"required\": [{\"name\": \"gateway_arn\", \"description\": \"The Amazon Resource Name (ARN) of the gateway. Use the  ListGateways operation to return a list of gateways for your account and Amazon Web Services Region.\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.storagegateway.describe_working_storage",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "gateway_arn",
+                        "description": "The Amazon Resource Name (ARN) of the gateway. Use the  ListGateways operation to return a list of gateways for your account and Amazon Web Services Region."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Returns information about the working storage of a gateway. This operation is only supported in the stored volumes gateway type. This operation is deprecated in cached volumes API version (20120630). Use DescribeUploadBuffer instead.NoteWorking storage is also referred to as upload buffer. You can also use the DescribeUploadBuffer operation to add upload buffer to a stored volume gateway.See also: AWS API Documentation\n"
+        },
+        {
+            "score": 0.31705206632614136,
+            "id": 560,
+            "tool_id": "89da3d7b1b1df94b8aeb2d899992882958d04085c2e5f746c01361e89ed452e7",
+            "text": "RapidAPI::requests.get\nAccess stock prices. Financial statements, real stock price values. SEC EDGAR API with all filings in real time. Free stock API to discover financial data instantly more at https://fmpcloud.io/ \nparams: {\"required\": [{\"name\": \"stock\", \"description\": \"\", \"type\": \"string\"}, {\"name\": \"apikey\", \"description\": \"get your apikey at https://fmpcloud.io/register\", \"type\": \"STRING\"}, {\"name\": \"period\", \"description\": \"annual / quarter\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "stock",
+                        "description": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "apikey",
+                        "description": "get your apikey at https://fmpcloud.io/register",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "period",
+                        "description": "annual / quarter",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Access stock prices. Financial statements, real stock price values. SEC EDGAR API with all filings in real time. Free stock API to discover financial data instantly more at https://fmpcloud.io/ "
+        },
+        {
+            "score": 0.31623736023902893,
+            "id": 2624,
+            "tool_id": "e22fc87962711628ab1316ca0fe1a43f525ff9f9f2cfc0d72ac1043303cafaf0",
+            "text": "RapidAPI::requests.get\nAn API showing all the latest currencies from official banks.\nparams: {\"required\": [{\"name\": \"bankid\", \"description\": \"\", \"type\": \"string\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "bankid",
+                        "description": "",
+                        "type": "string"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "An API showing all the latest currencies from official banks."
+        },
+        {
+            "score": 0.3121424913406372,
+            "id": 576,
+            "tool_id": "ba0dbdb49736046106c8d742657451714273f8ea8da01ff86d66514dee018a26",
+            "text": "aws::aws.logs.create_export_task\nCreates an export task so that you can efficiently export data from a log group to an Amazon S3 bucket. When you perform a CreateExportTask operation, you must use credentials that have permission to write to the S3 bucket that you specify as the destination.Exporting to S3 buckets that are encrypted with AES-256 is supported.You can export logs from multiple log groups or multiple time ranges to the same S3 bucket. To separate log data for each export task, specify a prefix to be used as the Amazon S3 key prefix for all exported objects.NoteTime-based sorting on chunks of log data inside an exported file is not guaranteed. You can sort the exported log field data by using Linux utilities.\nparams: {\"required\": [{\"name\": \"task_name\", \"description\": \"The name of the export task.\"}, {\"name\": \"log_group_name\", \"description\": \"The name of the log group.\"}, {\"name\": \"log_stream_name_prefix\", \"description\": \"Export only log streams that match the provided prefix. If you don\\u00e2\\u0080\\u0099t specify a value, no prefix filter is applied.\"}, {\"name\": \"from\", \"description\": \"The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC . Events with a timestamp earlier than this time are not exported.\"}, {\"name\": \"to\", \"description\": \"The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC . Events with a timestamp later than this time are not exported.\\nYou must specify a time that is not earlier than when this log group was created.\"}, {\"name\": \"destination\", \"description\": \"The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services Region.\"}, {\"name\": \"destination_prefix\", \"description\": \"The prefix used as the start of the key for every object exported. If you don\\u00e2\\u0080\\u0099t specify a value, the default is exportedlogs .\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.logs.create_export_task",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "task_name",
+                        "description": "The name of the export task."
+                    },
+                    {
+                        "name": "log_group_name",
+                        "description": "The name of the log group."
+                    },
+                    {
+                        "name": "log_stream_name_prefix",
+                        "description": "Export only log streams that match the provided prefix. If you donât specify a value, no prefix filter is applied."
+                    },
+                    {
+                        "name": "from",
+                        "description": "The start time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC . Events with a timestamp earlier than this time are not exported."
+                    },
+                    {
+                        "name": "to",
+                        "description": "The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC . Events with a timestamp later than this time are not exported.\nYou must specify a time that is not earlier than when this log group was created."
+                    },
+                    {
+                        "name": "destination",
+                        "description": "The name of S3 bucket for the exported log data. The bucket must be in the same Amazon Web Services Region."
+                    },
+                    {
+                        "name": "destination_prefix",
+                        "description": "The prefix used as the start of the key for every object exported. If you donât specify a value, the default is exportedlogs ."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Creates an export task so that you can efficiently export data from a log group to an Amazon S3 bucket. When you perform a CreateExportTask operation, you must use credentials that have permission to write to the S3 bucket that you specify as the destination.Exporting to S3 buckets that are encrypted with AES-256 is supported.You can export logs from multiple log groups or multiple time ranges to the same S3 bucket. To separate log data for each export task, specify a prefix to be used as the Amazon S3 key prefix for all exported objects.NoteTime-based sorting on chunks of log data inside an exported file is not guaranteed. You can sort the exported log field data by using Linux utilities."
+        },
+        {
+            "score": 0.31072160601615906,
+            "id": 2957,
+            "tool_id": "a8e7b37691e5c7619d2b60de181a9bdf8490966e963292511afac3a957e438b7",
+            "text": "RapidAPI::requests.get\nThis document details out the technical integration approach of FUND TRANSFER and merchants. This document refers to the server APIs.\nparams: {\"required\": [{\"name\": \"body\", \"description\": \"Give customerMobileNo in json format\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "body",
+                        "description": "Give customerMobileNo in json format",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "This document details out the technical integration approach of FUND TRANSFER and merchants. This document refers to the server APIs."
+        },
+        {
+            "score": 0.31055599451065063,
+            "id": 2875,
+            "tool_id": "04d813b73a91fa858bf02e36f56b9ffd3da58460b6b3d219e0e305feb53126ad",
+            "text": "aws::aws.storagegateway.add_working_storage\nConfigures one or more gateway local disks as working storage for a gateway. This operation is only supported in the stored volume gateway type. This operation is deprecated in cached volume API version 20120630. Use  AddUploadBuffer instead.NoteWorking storage is also referred to as upload buffer. You can also use the  AddUploadBuffer operation to add upload buffer to a stored volume gateway.See also: AWS API Documentation\n\nparams: {\"required\": [{\"name\": \"gateway_arn\", \"description\": \"The Amazon Resource Name (ARN) of the gateway. Use the  ListGateways operation to return a list of gateways for your account and Amazon Web Services Region.\"}, {\"name\": \"disk_ids\", \"description\": \"An array of strings that identify disks that are to be configured as working storage. Each string has a minimum length of 1 and maximum length of 300. You can get the disk IDs from the  ListLocalDisks API.\\n(string)\"}], \"optional\": []}",
+            "name": "aws",
+            "api_name": "aws.storagegateway.add_working_storage",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "gateway_arn",
+                        "description": "The Amazon Resource Name (ARN) of the gateway. Use the  ListGateways operation to return a list of gateways for your account and Amazon Web Services Region."
+                    },
+                    {
+                        "name": "disk_ids",
+                        "description": "An array of strings that identify disks that are to be configured as working storage. Each string has a minimum length of 1 and maximum length of 300. You can get the disk IDs from the  ListLocalDisks API.\n(string)"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Configures one or more gateway local disks as working storage for a gateway. This operation is only supported in the stored volume gateway type. This operation is deprecated in cached volume API version 20120630. Use  AddUploadBuffer instead.NoteWorking storage is also referred to as upload buffer. You can also use the  AddUploadBuffer operation to add upload buffer to a stored volume gateway.See also: AWS API Documentation\n"
+        },
+        {
+            "score": 0.30660271644592285,
+            "id": 598,
+            "tool_id": "81331808d5d4c64a4321077b571a8b5424fe6fd468cc8816f6adfe54b9163923",
+            "text": "RapidAPI::requests.get\nEmpower your business by letting your customers buy, sell, and exchange crypto. You will earn % on every transaction. 400+ cryptocurrencies and 75+ fiats are available. IMPORTANT: You should get your API key by creating a partner's account here: changenow.io/affiliate. Or email us: partners@changenow.io. \nparams: {\"required\": [{\"name\": \"from_to\", \"description\": \"(Required) Underscore separated pair of tickers\", \"type\": \"STRING\"}, {\"name\": \"api_key\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"userateid\", \"description\": \"(Optional) Use rateId for fixed-rate flow. If this field is true, you could use returned field \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"rateId\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" in next method for creating transaction to freeze estimated amount that you got in this method. Current estimated amount would be valid until time in field \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"validUntil\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "from_to",
+                        "description": "(Required) Underscore separated pair of tickers",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "api_key",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "userateid",
+                        "description": "(Optional) Use rateId for fixed-rate flow. If this field is true, you could use returned field \\\\\\\\\\\\\\\"rateId\\\\\\\\\\\\\\\" in next method for creating transaction to freeze estimated amount that you got in this method. Current estimated amount would be valid until time in field \\\\\\\\\\\\\\\"validUntil\\\\\\\\\\\\\\\"",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Empower your business by letting your customers buy, sell, and exchange crypto. You will earn % on every transaction. 400+ cryptocurrencies and 75+ fiats are available. IMPORTANT: You should get your API key by creating a partner's account here: changenow.io/affiliate. Or email us: partners@changenow.io. "
+        },
+        {
+            "score": 0.30501022934913635,
+            "id": 2330,
+            "tool_id": "ad986e69ee34ff2e8e9eee0d65ba679a6de3cc12759b2af341e98ee58c25f394",
+            "text": "az::Billing Subscription Move\nMove a subscription's charges to a new invoice section\nparams: {\"required\": [{\"name\": \"account-name\", \"description\": \"The ID that uniquely identifies a billing account.\"}, {\"name\": \"destination-invoice-section-id\", \"description\": \"The destination invoice section id.\"}, {\"name\": \"no-wait\", \"description\": \"Do not wait for the long-running operation to finish.\", \"default_value\": \"False\"}], \"optional\": []}",
+            "name": "az",
+            "api_name": "Billing Subscription Move",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "account-name",
+                        "description": "The ID that uniquely identifies a billing account."
+                    },
+                    {
+                        "name": "destination-invoice-section-id",
+                        "description": "The destination invoice section id."
+                    },
+                    {
+                        "name": "no-wait",
+                        "description": "Do not wait for the long-running operation to finish.",
+                        "default_value": "False"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Move a subscription's charges to a new invoice section"
+        },
+        {
+            "score": 0.30476146936416626,
+            "id": 2474,
+            "tool_id": "3a8f34eefb095a91fcb95c85518e823920bed89f66d613f0ced0c3e4d7e314a5",
+            "text": "az::billing-benefits validate-purchase\nValidate savings plan purchase\nparams: {\"required\": [{\"name\": \"benefits\", \"description\": \"Support shorthand-syntax, json-file and yaml-file.\"}, {\"name\": \"debug\", \"description\": \"Increase logging verbosity to show all debug logs.\"}, {\"name\": \"help -h\", \"description\": \"Show this help message and exit.\"}, {\"name\": \"only-show-errors\", \"description\": \"Only show errors, suppressing warnings.\"}, {\"name\": \"output -o\", \"description\": \"Output format.\"}, {\"name\": \"query\", \"description\": \"JMESPath query string.\"}, {\"name\": \"subscription\", \"description\": \"Name or ID of subscription.\"}, {\"name\": \"verbose\", \"description\": \"Increase logging verbosity. Use --debug for full debug logs.\"}], \"optional\": []}",
+            "name": "az",
+            "api_name": "billing-benefits validate-purchase",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "benefits",
+                        "description": "Support shorthand-syntax, json-file and yaml-file."
+                    },
+                    {
+                        "name": "debug",
+                        "description": "Increase logging verbosity to show all debug logs."
+                    },
+                    {
+                        "name": "help -h",
+                        "description": "Show this help message and exit."
+                    },
+                    {
+                        "name": "only-show-errors",
+                        "description": "Only show errors, suppressing warnings."
+                    },
+                    {
+                        "name": "output -o",
+                        "description": "Output format."
+                    },
+                    {
+                        "name": "query",
+                        "description": "JMESPath query string."
+                    },
+                    {
+                        "name": "subscription",
+                        "description": "Name or ID of subscription."
+                    },
+                    {
+                        "name": "verbose",
+                        "description": "Increase logging verbosity. Use --debug for full debug logs."
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Validate savings plan purchase"
+        },
+        {
+            "score": 0.30405744910240173,
+            "id": 3085,
+            "tool_id": "8946a44887793c7a899159cfa081a7a8e05a1436d27094be94f9a72058f48cf8",
+            "text": "RapidAPI::requests.get\nNOWPayments is a non-custodial cryptocurrency payment processing platform. Accept payments in a wide range of cryptos and get them instantly converted into a coin of your choice and sent to your wallet. Keeping it simple – no excess. NOWPayments' API allows you to integrate crypto payments in 50+ assets into any service.\nparams: {\"required\": [{\"name\": \"datefrom\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"page\", \"description\": \"\", \"type\": \"NUMBER\"}, {\"name\": \"limit\", \"description\": \"\", \"type\": \"NUMBER\"}, {\"name\": \"sortby\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"orderby\", \"description\": \"\", \"type\": \"STRING\"}, {\"name\": \"dateto\", \"description\": \"\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "datefrom",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "page",
+                        "description": "",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "limit",
+                        "description": "",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "sortby",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "orderby",
+                        "description": "",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "dateto",
+                        "description": "",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "NOWPayments is a non-custodial cryptocurrency payment processing platform. Accept payments in a wide range of cryptos and get them instantly converted into a coin of your choice and sent to your wallet. Keeping it simple – no excess. NOWPayments' API allows you to integrate crypto payments in 50+ assets into any service."
+        },
+        {
+            "score": 0.30369505286216736,
+            "id": 2315,
+            "tool_id": "f7752247ed74a14ad0cafacb937bad7da7b047e87ed91a64c0c924fb3601c7b4",
+            "text": "RapidAPI::requests.get\nAmortized loan repayment schedule calculator\nparams: {\"required\": [{\"name\": \"annualinterestrate\", \"description\": \"Decimal number: (annual interest rate in percent) / 100\", \"type\": \"NUMBER\"}, {\"name\": \"installmentcount\", \"description\": \"Number of installments (payments)\", \"type\": \"NUMBER\"}, {\"name\": \"startdate\", \"description\": \"Start date of the schedule\", \"type\": \"DATE (YYYY-MM-DD)\"}, {\"name\": \"principalamount\", \"description\": \"Principal amount of the loan\", \"type\": \"NUMBER\"}, {\"name\": \"repaymentinterval\", \"description\": \"Allowed values: year, month, week, biweekly\", \"type\": \"STRING\"}], \"optional\": []}",
+            "name": "RapidAPI",
+            "api_name": "requests.get",
+            "parameters": {
+                "required": [
+                    {
+                        "name": "annualinterestrate",
+                        "description": "Decimal number: (annual interest rate in percent) / 100",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "installmentcount",
+                        "description": "Number of installments (payments)",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "startdate",
+                        "description": "Start date of the schedule",
+                        "type": "DATE (YYYY-MM-DD)"
+                    },
+                    {
+                        "name": "principalamount",
+                        "description": "Principal amount of the loan",
+                        "type": "NUMBER"
+                    },
+                    {
+                        "name": "repaymentinterval",
+                        "description": "Allowed values: year, month, week, biweekly",
+                        "type": "STRING"
+                    }
+                ],
+                "optional": []
+            },
+            "description": "Amortized loan repayment schedule calculator"
+        }
+    ]
+}
