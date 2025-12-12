@@ -1,3 +1,4 @@
+import json
 import unittest
 
 from src.context_segmenter import DeterministicSegmenter, LLMBasedSegmenter
@@ -6,7 +7,10 @@ from src.context_segmenter import DeterministicSegmenter, LLMBasedSegmenter
 class FakeResponse:
     def __init__(self, output_json=None, output_text=None):
         self._output_json = output_json
-        self.output_text = output_text
+        if output_text is None and output_json is not None and not isinstance(output_json, Exception):
+            self.output_text = json.dumps(output_json)
+        else:
+            self.output_text = output_text
 
     @property
     def output_json(self):
@@ -47,14 +51,17 @@ class TestDeterministicSegmenter(unittest.TestCase):
 
 class TestLLMBasedSegmenter(unittest.TestCase):
     def test_segment_raises_without_client(self):
-        seg = LLMBasedSegmenter(model="m", client=None)
+        seg = LLMBasedSegmenter()
+        seg.client = None
+
         with self.assertRaises(RuntimeError):
             seg.segment("anything")
 
     def test_segment_uses_output_json_when_available(self):
         response = FakeResponse(output_json={"segments": ["a", "b"]})
         client = FakeClient(response)
-        seg = LLMBasedSegmenter(model="m", client=client)
+        seg = LLMBasedSegmenter()
+        seg.client = client
 
         segments = seg.segment("do things")
         self.assertEqual(segments, ["a", "b"])
@@ -63,7 +70,8 @@ class TestLLMBasedSegmenter(unittest.TestCase):
     def test_segment_falls_back_to_output_text(self):
         response = FakeResponse(output_json=ValueError("no json"), output_text='{"segments": ["x"]}')
         client = FakeClient(response)
-        seg = LLMBasedSegmenter(model="m", client=client)
+        seg = LLMBasedSegmenter()
+        seg.client = client
 
         segments = seg.segment("another task")
         self.assertEqual(segments, ["x"])

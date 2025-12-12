@@ -13,7 +13,6 @@ class TestReranker(unittest.TestCase):
 
     def test_llm_reranker_falls_back_without_client(self):
         r = reranker.OpenAILLMReranker(model="dummy")
-        # Ensure client is None so it falls back to identity
         r._client = None
         candidates = [{"tool_id": "x"}, {"tool_id": "y"}]
         res = r.rerank("query", candidates, top_n=1)

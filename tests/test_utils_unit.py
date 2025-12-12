@@ -47,7 +47,7 @@ class TestUtils(unittest.TestCase):
         with tempfile.NamedTemporaryFile("w+", delete=False) as f:
             for rec in recs:
                 f.write(json.dumps(rec) + "\n")
-            f.write("\n")  # blank line should be ignored
+            f.write("\n")
             path = f.name
 
         try:
@@ -108,7 +108,6 @@ class TestUtils(unittest.TestCase):
     def test_normalize_vectors(self):
         vecs = np.array([[3.0, 4.0], [0.0, 5.0]])
         normed = utils.normalize(vecs)
-        # First vector magnitude is 5; second is 5
         np.testing.assert_allclose(normed[0], [0.6, 0.8])
         np.testing.assert_allclose(normed[1], [0.0, 1.0])
 

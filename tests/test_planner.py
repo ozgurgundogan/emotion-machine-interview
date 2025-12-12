@@ -22,7 +22,7 @@ class TestPlanner(unittest.TestCase):
         plan = pl.plan("do something", candidates, max_candidates=2)
         self.assertEqual(plan["steps"][0]["tool_id"], "t1")
         self.assertEqual(set(plan["steps"][0]["arguments"].keys()), {"arg1", "arg2"})
-        self.assertEqual(plan["candidates_considered"], ["t1"])
+        self.assertEqual(plan["candidates_considered"], ["t1", "t2"])
 
 
 if __name__ == "__main__":

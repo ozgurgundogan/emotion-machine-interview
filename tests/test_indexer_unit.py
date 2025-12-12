@@ -1,8 +1,10 @@
 import importlib
+import json
 import sys
 import tempfile
 import types
 import unittest
+from pathlib import Path
 
 import numpy as np
 
@@ -24,7 +26,6 @@ class DummyIndex:
         self.vectors.extend(list(vecs))
 
     def search(self, qvec, k):
-        # simple dot-product search
         scores = []
         ids = []
         q = qvec[0]
@@ -41,17 +42,16 @@ _INDEX_STORE = {}
 def install_stubs(dummy_vectors):
     sys.modules.pop("src.embedder", None)
     sys.modules.pop("faiss", None)
-    # Stub embedder
     embedder_mod = types.ModuleType("src.embedder")
     embedder_mod.Embedder = lambda: DummyEmbedder(dummy_vectors)
     sys.modules["src.embedder"] = embedder_mod
 
-    # Stub faiss
     faiss_mod = types.ModuleType("faiss")
     faiss_mod.IndexFlatIP = DummyIndex
 
     def write_index(idx, path):
         _INDEX_STORE[path] = idx
+        Path(path).touch()
         return None
 
     def read_index(path):
@@ -90,6 +90,24 @@ class TestIndexer(unittest.TestCase):
             results = idx.search("query")
             self.assertEqual(results[0]["tool_id"], "a")
             self.assertGreaterEqual(results[0]["score"], results[-1]["score"])
+
+    def test_build_index_handles_empty_vectors(self):
+        dummy_vectors = {}
+        install_stubs(dummy_vectors)
+        sys.modules.pop("src.indexer", None)
+        with tempfile.TemporaryDirectory() as tmpdir:
+            index_path = f"{tmpdir}/faiss.index"
+            meta_path = f"{tmpdir}/metadata.json"
+            indexer_module = importlib.import_module("src.indexer")
+            Indexer = indexer_module.Indexer
+
+            idx = Indexer(index_path=index_path, metadata_path=meta_path, dim=2)
+            idx.embedder = DummyEmbedder(dummy_vectors)
+
+            idx.build_index()
+            self.assertTrue(Path(index_path).exists())
+            self.assertTrue(Path(meta_path).exists())
+            self.assertEqual(json.loads(Path(meta_path).read_text()), [])
 
 
 if __name__ == "__main__":
