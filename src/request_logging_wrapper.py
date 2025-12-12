@@ -6,7 +6,6 @@ def wrap_client_with_request_logging(client, logger=None):
 
     log = logger or logging.getLogger("request_logger")
 
-    # Wrap indexer.search
     original_search = client.indexer.search
 
     @functools.wraps(original_search)
@@ -23,7 +22,6 @@ def wrap_client_with_request_logging(client, logger=None):
         )
         return results
 
-    # Wrap reranker.rerank
     original_rerank = client.reranker.rerank
 
     @functools.wraps(original_rerank)
@@ -42,7 +40,6 @@ def wrap_client_with_request_logging(client, logger=None):
         )
         return res
 
-    # Wrap planner.plan
     original_plan = client.planner.plan
 
     @functools.wraps(original_plan)
@@ -61,12 +58,10 @@ def wrap_client_with_request_logging(client, logger=None):
         )
         return plan
 
-    # Wrap plan_query to thread request_id through wrapped components.
     original_plan_query = client.plan_query
 
     @functools.wraps(original_plan_query)
     def plan_query_with_logging(query, *args, request_id=None, **kwargs):
-        # Temporarily swap methods to inject request_id
         client.indexer.search = lambda q, *a, **k: search_with_logging(q, *a, request_id=request_id, **k)
         client.reranker.rerank = (
             lambda q, cands, top_n=5, *a, **k: rerank_with_logging(
@@ -80,7 +75,6 @@ def wrap_client_with_request_logging(client, logger=None):
         )
         try:
             result = original_plan_query(query, *args, **kwargs)
-            # Final log with plan + candidates for correlation
             log.info(
                 "result",
                 extra={
@@ -92,7 +86,6 @@ def wrap_client_with_request_logging(client, logger=None):
             result["request_id"] = request_id
             return result
         finally:
-            # Restore original methods
             client.indexer.search = original_search
             client.reranker.rerank = original_rerank
             client.planner.plan = original_plan

@@ -102,7 +102,6 @@ def load_llm_response_as_json(text: str) -> dict:
 
     text = text.strip()
 
-    # Remove Markdown code fences if present
     if text.startswith("```"):
         text = re.sub(r"^```[a-zA-Z]*\n?", "", text)
         text = re.sub(r"\n?```$", "", text)
