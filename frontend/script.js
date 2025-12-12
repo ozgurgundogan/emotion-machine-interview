@@ -167,7 +167,6 @@ form.addEventListener("submit", async (e) => {
   await sendQuery(message);
 });
 
-// Submit on Enter (and Shift+Enter for newline)
 promptInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
@@ -175,5 +174,4 @@ promptInput.addEventListener("keydown", (e) => {
   }
 });
 
-// Seed with a welcome message
 appendBubble("Hi! Describe what you want to do and I'll pick the right tool.");
