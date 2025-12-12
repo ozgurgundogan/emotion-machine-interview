@@ -1,10 +1,9 @@
-import json
 import os
 
 from openai import OpenAI
 
-from src.environment import DEFAULT_PLANNER_MODEL
 from src.logger import get_logger
+from src.utils import load_llm_response_as_json
 
 
 class Planner:
@@ -48,7 +47,7 @@ class LLMPlanner(Planner):
     def __init__(self):
         super().__init__()
         self.name = "llm_planner"
-        self.model = os.getenv("LLM_PLANNER_MODEL", DEFAULT_PLANNER_MODEL)
+        self.model = "gpt-4o" # os.getenv("LLM_PLANNER_MODEL", DEFAULT_PLANNER_MODEL)
         self._client = OpenAI() if os.getenv("OPENAI_API_KEY") else None
         self.logger = get_logger(self.name)
 
@@ -66,8 +65,8 @@ class LLMPlanner(Planner):
     def _build_prompt(self, query, candidates):
         return (
             "You are a tool-calling planner. Given a user request and a list of candidate tools, "
-            "produce a JSON plan of tool invocations.\n"
-            "Output JSON format:\n"
+            "produce a plan of tool invocations as given format below.\n"
+            "Output format:\n"
             '{"strategy":"llm_planner","steps":[{"tool_id":"...","arguments":{"param":"value"}}]}\n'
             'If an argument is unknown, use the string "<fill>". Do not add explanations.\n\n'
             f"User request:\n{query}\n\n"
@@ -78,13 +77,14 @@ class LLMPlanner(Planner):
     def plan(self, query, candidates, max_candidates=10):
         if not self._client:
             raise RuntimeError("LLM planner missing client or OPENAI_API_KEY not set.")
+
         prompt = self._build_prompt(query, candidates[:max_candidates])
         resp = self._client.responses.create(model=self.model,
                                              input=prompt,
                                              temperature=0.2,
-                                             max_output_tokens=300,
-                                             response_format={"type": "json_object"})
-        plan = json.loads(resp.output_text)
+
+                                             )
+        plan = load_llm_response_as_json(resp.output_text)
         plan["query"] = query
         plan["strategy"] = self.name
         plan["candidates_considered"] = [c.get("tool_id") for c in candidates[:max_candidates]]
