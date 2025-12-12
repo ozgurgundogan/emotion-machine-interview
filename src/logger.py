@@ -9,7 +9,8 @@ def get_logger(name="app", log_file="../logs/log.txt", level=logging.INFO):
 
     logger.setLevel(level)
     formatter = logging.Formatter(
-        fmt="%(asctime)s [%(levelname)s] %(name)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+        fmt="%(asctime)s.%(msecs)03d [%(levelname)s] %(name)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
     )
 
     stream_handler = logging.StreamHandler()
