@@ -1,5 +1,7 @@
 import json
 import os
+import time
+from pprint import pprint
 
 from src.context_segmenter import DeterministicSegmenter, LLMBasedSegmenter
 from src.embedder import Embedder
@@ -30,6 +32,44 @@ class ToolSelectorClient:
         self.planner = LLMPlanner() if use_llm_planner else Planner()
 
 
+    def plan_query_with_timing(
+        self,
+        query,
+        count: int = 5
+    ):
+        t0 = time.perf_counter()
+        segmented_queries = self.context_segments.segment(query)
+        t1 = time.perf_counter()
+
+        candidates = [
+            item
+            for seg_query in segmented_queries
+            for item in self.indexer.search(seg_query)
+        ]
+        t2 = time.perf_counter()
+
+        rerank_result = self.reranker.rerank(query, candidates, top_n=count)
+        t3 = time.perf_counter()
+
+        plan = self.planner.plan(query, rerank_result.candidates, max_candidates=count)
+        t4 = time.perf_counter()
+
+        timings_ms = {
+            "query": query,
+            "segment_in_llm_ms": (t1 - t0) * 1000,
+            "search_in_vector_db_ms": (t2 - t1) * 1000,
+            "rerank_in_llm_ms": (t3 - t2) * 1000,
+            "plan_in_llm_ms": (t4 - t3) * 1000,
+            "total_ms": (t4 - t0) * 1000,
+        }
+
+        pprint(timings_ms)
+
+        return {
+            "query": query,
+            "plan": plan,
+            "candidates": candidates,
+        }
 
     def plan_query(
         self,
