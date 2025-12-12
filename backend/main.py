@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from src.client import ToolSelectorClient
+from src.environment import RESPONSE_RETRIEVAL_COUNT
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 INDEX_FILE = PROJECT_ROOT / "index" / "faiss.index"
@@ -40,9 +41,7 @@ async def query_tool(req: Request):
     data = await req.json()
     query = data.get("query", "")
     stream = bool(data.get("stream"))
-    result = AGENT.plan_query(query, k=5)
-
-    print(context_session_id)
+    result = AGENT.plan_query(query, count=RESPONSE_RETRIEVAL_COUNT)
 
     if stream:
         return StreamingResponse(stream_output(result), media_type="text/plain")
