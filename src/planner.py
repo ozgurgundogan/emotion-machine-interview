@@ -17,7 +17,7 @@ class Planner:
             return {"query": query, "strategy": self.name, "steps": [], "notes": "No candidates."}
 
         steps = []
-        for cand in candidates[:1]:
+        for cand in candidates[:max_candidates]:
             params = (cand or {}).get("parameters") or {}
             required = params.get("required", []) or []
             args = {}
