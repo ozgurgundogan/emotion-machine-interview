@@ -1,4 +1,9 @@
+import os
 import re
+
+from openai import OpenAI
+
+from src.utils import load_llm_response_as_json
 
 
 class DeterministicSegmenter:
@@ -29,10 +34,9 @@ class DeterministicSegmenter:
 
 class LLMBasedSegmenter:
 
-    def __init__(self, model=None, client=None, prompt_builder=None):
+    def __init__(self, model=None):
         self.model = model
-        self.client = client
-        self.prompt_builder = prompt_builder or self._default_prompt
+        self.client = OpenAI() if os.getenv("OPENAI_API_KEY") else None
 
     def _default_prompt(self, query):
         return (
@@ -49,13 +53,10 @@ class LLMBasedSegmenter:
             model=self.model,
             input=prompt,
             temperature=0.0,
-            max_output_tokens=200,
-            response_format={"type": "json_object"},
         )
         try:
-            data = resp.output_json  # if available
+            data = load_llm_response_as_json(resp.output_text)
         except Exception:
-            import json
+            raise Exception("Some error occurred during segmenting.")
 
-            data = json.loads(resp.output_text)
         return data.get("segments") or []
