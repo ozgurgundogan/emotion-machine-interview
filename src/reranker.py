@@ -1,4 +1,3 @@
-import json
 import os
 from dataclasses import dataclass
 from typing import Any, Dict, List
@@ -6,6 +5,8 @@ from typing import Any, Dict, List
 from openai import OpenAI
 
 from src.environment import DEFAULT_RERANK_MODEL
+from src.utils import load_llm_response_as_json
+
 
 @dataclass
 class RerankResult:
@@ -19,7 +20,7 @@ class Reranker:
 
 
 class OpenAILLMReranker(Reranker):
-    def __init__(self, model=None):
+    def __init__(self, model="gpt-4o"):
         self.model = model or os.getenv("LLM_RERANK_MODEL", DEFAULT_RERANK_MODEL)
         self._client = OpenAI() if os.getenv("OPENAI_API_KEY") else None
 
@@ -33,12 +34,12 @@ class OpenAILLMReranker(Reranker):
                 f"desc:{c.get('description','')[:120]} req:[{req_str}]"
             )
         return (
-            "You are a tool reranker. Given a user request and a list of candidate tools, "
-            "return the best tools ordered from most relevant to least. "
-            "Output JSON: {\"ranked_ids\": [\"tool_id1\", \"tool_id2\", ...]}.\n"
-            "User request:\n"
-            f"{query}\n\n"
-            "Candidates:\n" + "\n".join(lines) + "\n"
+            'You are a tool reranker. Given a user request and a list of candidate tools, '
+            'return the best tools ordered from most relevant to least. '
+            'Output JSON : {"ranked_ids": ["tool_id1", "tool_id2", ...]}.\n'
+            'User request:\n'
+            f'{query}\n\n'
+            'Candidates:\n' + "\n".join(lines) + '\n'
         )
 
     def rerank(self, query, candidates, top_n=5):
@@ -53,10 +54,8 @@ class OpenAILLMReranker(Reranker):
                 model=self.model,
                 input=prompt,
                 temperature=0.0,
-                max_output_tokens=200,
-                response_format={"type": "json_object"},
             )
-            data = json.loads(resp.output_text)
+            data = load_llm_response_as_json(resp.output_text)
             ranked_ids = data.get("ranked_ids", [])
             by_id = {c.get("tool_id"): c for c in candidates}
             ordered = [by_id[tid] for tid in ranked_ids if tid in by_id]
