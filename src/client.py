@@ -1,6 +1,7 @@
 import json
 import os
 
+from src.context_segmenter import DeterministicSegmenter, LLMBasedSegmenter
 from src.embedder import Embedder
 from src.environment import INDEX_PATH, METADATA_PATH
 from src.executor import Executor
@@ -11,6 +12,7 @@ from src.reranker import OpenAILLMReranker, Reranker
 
 use_llm_planner = os.getenv("USE_LLM_PLANNER", "false").lower() in ("1", "true", "yes")
 use_llm_rerank = os.getenv("USE_LLM_RERANK", "false").lower() in ("1", "true", "yes")
+use_llm_context_segmenter = os.getenv("USE_LLM_CONTEXT_SEGMENTER", "false").lower() in ("1", "true", "yes")
 
 class ToolSelectorClient:
     def __init__(
@@ -22,23 +24,27 @@ class ToolSelectorClient:
         self.logger = get_logger(logger_name)
         self.indexer = Indexer(index_path=index_path, metadata_path=metadata_path)
         self.indexer.load()
+        self.context_segments = LLMBasedSegmenter() if use_llm_context_segmenter else DeterministicSegmenter()
         self.embedder = Embedder()
         self.reranker = OpenAILLMReranker() if use_llm_rerank else Reranker()
         self.planner = LLMPlanner() if use_llm_planner else Planner()
 
 
+
     def plan_query(
         self,
         query,
-        k: int = 5
+        count: int = 5
     ):
-        candidates = self.indexer.search(query)
-        rerank_result = self.reranker.rerank(query, candidates, top_n=k)
-        plan = self.planner.plan(query, rerank_result.candidates, max_candidates=k)
+        segmented_queries = self.context_segments.segment(query)
+
+        candidates = [item for seg_query in segmented_queries for item in self.indexer.search(seg_query)]
+        rerank_result = self.reranker.rerank(query, candidates, top_n=count)
+        plan = self.planner.plan(query, rerank_result.candidates, max_candidates=count)
         return {"query": query, "plan": plan, "candidates": candidates}
 
-    def run_and_print(self, query, k=5):
-        result = self.plan_query(query, k=k)
+    def run_and_print(self, query, count=5):
+        result = self.plan_query(query, count=count)
         self.logger.info("Query: %s", query)
         print("\nTop-k tools for query:")
         print(query)
@@ -62,4 +68,4 @@ class ToolSelectorClient:
 if __name__ == "__main__":
     user_query = "Book a flight from Los Angeles to New York for two people on June 15th."
     client = ToolSelectorClient()
-    client.run_and_print(user_query, k=5)
+    client.run_and_print(user_query, count=5)
