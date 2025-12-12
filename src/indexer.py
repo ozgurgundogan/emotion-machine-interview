@@ -40,6 +40,20 @@ class Indexer:
         })
 
     def build_index(self):
+        if not self.vectors:
+            if self.index is None:
+                if self.dim is None:
+                    dummy_vec = self.embedder.embed("").astype("float32")
+                    self._init_index(dummy_vec.shape[0])
+                else:
+                    self._init_index(self.dim)
+            faiss.write_index(self.index, str(self.index_path))
+            with open(self.metadata_path, "w") as f:
+                json.dump(self.metadata, f, indent=4)
+            print(f"\nNo vectors to index; saved empty index → {self.index_path}")
+            print(f"Metadata saved → {self.metadata_path}\n")
+            return
+
         vectors = np.stack(self.vectors).astype("float32")
         vectors = normalize(vectors)
 
