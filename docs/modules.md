@@ -7,6 +7,7 @@ Modules overview
 - `src/client.py`: high-level pipeline entrypoint; loads index/metadata, runs retrieval, optional rerank, planning, and can execute a stubbed plan.
 - `src/reranker.py`: identity/top-k passthrough reranker and an OpenAI LLM-based JSON reranker (selected via env).
 - `src/planner.py`: deterministic top-1 planner with placeholder args and an optional OpenAI JSON planner (requires API key).
+- `src/context_segmenter.py`: query segmentation strategies (deterministic delimiter-based and an LLM-backed placeholder) for multi-segment requests.
 - `src/executor.py`: executes planned steps by looking up registered tool handlers; unregistered tools are marked as skipped.
 - `src/logger.py`: configures loggers/handlers with consistent formatting for console/file output.
 - `backend/main.py`: FastAPI service exposing `/api/query`; streams or returns the pipeline result for the frontend.

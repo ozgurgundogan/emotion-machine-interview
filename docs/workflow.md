@@ -3,6 +3,8 @@ Flow (backend)
 ```
 User request
   ↓
+Query segmentation (delimiter-based by default; LLM when enabled)
+  ↓
 Embed query (Embedder)
   ↓
 FAISS search over tool vectors (Indexer + metadata)
