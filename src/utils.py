@@ -1,6 +1,7 @@
 import ast
 import hashlib
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -93,3 +94,17 @@ def generate_function_as_text(fn):
 def normalize(vecs):
     norms = np.linalg.norm(vecs, axis=1, keepdims=True)
     return vecs / norms
+
+
+def load_llm_response_as_json(text: str) -> dict:
+    if not text:
+        raise ValueError("Empty LLM response")
+
+    text = text.strip()
+
+    # Remove Markdown code fences if present
+    if text.startswith("```"):
+        text = re.sub(r"^```[a-zA-Z]*\n?", "", text)
+        text = re.sub(r"\n?```$", "", text)
+
+    return json.loads(text)
