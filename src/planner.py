@@ -2,13 +2,14 @@ import os
 
 from openai import OpenAI
 
+from src.environment import DEFAULT_PLANNER_MODEL
 from src.logger import get_logger
 from src.utils import load_llm_response_as_json
 
 
 class Planner:
     def __init__(self):
-        self.name = "deterministic_top1"
+        self.name = "deterministic_topk"
         self.logger = get_logger("planner")
 
     def plan(self, query, candidates, max_candidates=1):
@@ -38,7 +39,7 @@ class Planner:
             "query": query,
             "strategy": self.name,
             "notes": "LLM planner not used; deterministic top-1 plan.",
-            "candidates_considered": [c.get("tool_id") for c in candidates[:1]],
+            "candidates_considered": [c.get("tool_id") for c in candidates[:max_candidates]],
             "steps": steps,
         }
 
@@ -47,7 +48,7 @@ class LLMPlanner(Planner):
     def __init__(self):
         super().__init__()
         self.name = "llm_planner"
-        self.model = "gpt-4o" # os.getenv("LLM_PLANNER_MODEL", DEFAULT_PLANNER_MODEL)
+        self.model = os.getenv("LLM_PLANNER_MODEL", DEFAULT_PLANNER_MODEL)
         self._client = OpenAI() if os.getenv("OPENAI_API_KEY") else None
         self.logger = get_logger(self.name)
 

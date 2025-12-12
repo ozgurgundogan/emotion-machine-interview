@@ -3,6 +3,7 @@ import re
 
 from openai import OpenAI
 
+from src.environment import DEFAULT_SEGMENTER_MODEL
 from src.utils import load_llm_response_as_json
 
 
@@ -34,11 +35,12 @@ class DeterministicSegmenter:
 
 class LLMBasedSegmenter:
 
-    def __init__(self, model=None):
-        self.model = model
+    def __init__(self):
+        self.model = DEFAULT_SEGMENTER_MODEL
         self.client = OpenAI() if os.getenv("OPENAI_API_KEY") else None
 
-    def _default_prompt(self, query):
+
+    def build_prompt(self, query):
         return (
             "Split the user request into minimal sub-tasks (2-3 segments max). "
             "Return JSON: {\"segments\": [\"segment1\", \"segment2\", ...]}.\n"
@@ -48,15 +50,11 @@ class LLMBasedSegmenter:
     def segment(self, query):
         if not self.client:
             raise RuntimeError("LLM client not configured for segmenter.")
-        prompt = self.prompt_builder(query)
+        prompt = self.build_prompt(query)
         resp = self.client.responses.create(
             model=self.model,
             input=prompt,
             temperature=0.0,
         )
-        try:
-            data = load_llm_response_as_json(resp.output_text)
-        except Exception:
-            raise Exception("Some error occurred during segmenting.")
-
+        data = load_llm_response_as_json(resp.output_text)
         return data.get("segments") or []

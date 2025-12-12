@@ -9,6 +9,7 @@ MISMATCH_PATH = "../evaluation/mismatches.jsonl"
 DEFAULT_EMBED_MODEL = "all-MiniLM-L6-v2"
 DEFAULT_RERANK_MODEL = "gpt-4o-mini"
 DEFAULT_PLANNER_MODEL = "gpt-4o-mini"
+DEFAULT_SEGMENTER_MODEL = "gpt-4o-mini"
 
 
 INDEX_DB_RETRIEVAL_COUNT = 10
