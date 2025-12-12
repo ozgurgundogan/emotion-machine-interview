@@ -67,9 +67,17 @@ def wrap_client_with_request_logging(client, logger=None):
     @functools.wraps(original_plan_query)
     def plan_query_with_logging(query, *args, request_id=None, **kwargs):
         # Temporarily swap methods to inject request_id
-        client.indexer.search = search_with_logging
-        client.reranker.rerank = rerank_with_logging
-        client.planner.plan = plan_with_logging
+        client.indexer.search = lambda q, *a, **k: search_with_logging(q, *a, request_id=request_id, **k)
+        client.reranker.rerank = (
+            lambda q, cands, top_n=5, *a, **k: rerank_with_logging(
+                q, cands, top_n=top_n, *a, request_id=request_id, **k
+            )
+        )
+        client.planner.plan = (
+            lambda q, cands, max_candidates=10, *a, **k: plan_with_logging(
+                q, cands, max_candidates=max_candidates, *a, request_id=request_id, **k
+            )
+        )
         try:
             result = original_plan_query(query, *args, **kwargs)
             # Final log with plan + candidates for correlation
