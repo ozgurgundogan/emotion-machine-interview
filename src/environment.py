@@ -23,7 +23,7 @@ DEFAULT_RERANK_MODEL = os.getenv("DEFAULT_RERANK_MODEL", "gpt-4o")
 DEFAULT_PLANNER_MODEL = os.getenv("DEFAULT_PLANNER_MODEL", "gpt-4o")
 DEFAULT_SEGMENTER_MODEL = os.getenv("DEFAULT_SEGMENTER_MODEL", "gpt-4o-mini")
 
-INDEX_DB_RETRIEVAL_COUNT = int(os.getenv("INDEX_DB_RETRIEVAL_COUNT", "10"))
+INDEX_DB_RETRIEVAL_COUNT = int(os.getenv("INDEX_DB_RETRIEVAL_COUNT", "20"))
 APPLY_STD = os.getenv("APPLY_STD", "true").lower() in ("1", "true", "yes", "on")
 STD_COEF = float(os.getenv("STD_COEF", "0.5"))
 RESPONSE_RETRIEVAL_COUNT = int(os.getenv("RESPONSE_RETRIEVAL_COUNT", "5"))
