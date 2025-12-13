@@ -3,18 +3,19 @@ Flow (backend)
 ```
 User request
   ↓
-Query segmentation (delimiter-based by default; LLM when enabled)
+Context segmentation → deterministic delimiters or LLM (USE_LLM_CONTEXT_SEGMENTER)
   ↓
-Embed query (Embedder)
+Embed each segment → FAISS search per segment (cosine/IP, optional std-dev cutoff)
   ↓
-FAISS search over tool vectors (Indexer + metadata)
+Merge results → optional rerank (identity or OpenAI-based JSON reranker)
   ↓
-Rerank (identity or LLM)
+Plan → deterministic top-1 with placeholder args or LLM planner
   ↓
-Plan (deterministic top-1 or LLM)
-  ↓
-Return candidates (with scores) + plan; execution is stubbed
+Return candidates (with scores) + plan; streaming returns the JSON payload line by line
 ```
+
+- Retrieval depth is set by `INDEX_DB_RETRIEVAL_COUNT`; scores can be filtered with `APPLY_STD`/`STD_COEF` before rerank/plan.
+- The backend enforces the client-facing cap via `RESPONSE_RETRIEVAL_COUNT`.
 
 What the user sees (frontend)
 - Land on the UI, enter a backend URL, and submit a query.

@@ -55,7 +55,6 @@ class ToolSelectorClient:
         t4 = time.perf_counter()
 
         timings_ms = {
-            "query": query,
             "segment_in_llm_ms": (t1 - t0) * 1000,
             "search_in_vector_db_ms": (t2 - t1) * 1000,
             "rerank_in_llm_ms": (t3 - t2) * 1000,
@@ -69,6 +68,7 @@ class ToolSelectorClient:
             "query": query,
             "plan": plan,
             "candidates": candidates,
+            "timings_ms": timings_ms,
         }
 
     def plan_query(
